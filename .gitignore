@@ -15,6 +15,10 @@ local.properties
 .loadpath
 .recommenders
 
+# Tomcat
+apache-tomcat-10.0.14/
+
+
 # External tool builders
 .externalToolBuilders/
 

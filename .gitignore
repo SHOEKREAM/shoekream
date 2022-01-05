@@ -17,6 +17,7 @@ local.properties
 
 # Tomcat
 apache-tomcat-10.0.14/
+Servers/
 
 
 # External tool builders

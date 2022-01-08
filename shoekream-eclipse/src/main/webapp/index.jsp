@@ -17,6 +17,13 @@
 		<title>SHOEKREAM</title>
 	</head>
 	<body>
+		<!-- Header -->
+		<jsp:include page="./header.jsp"/>
 		
+		<!-- Main -->
+		<jsp:include page="./main.jsp"/>
+		
+		<!-- Footer -->
+		<jsp:include page="./footer.jsp"/>
 	</body>
 </html>

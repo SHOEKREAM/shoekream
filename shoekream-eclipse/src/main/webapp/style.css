@@ -9,7 +9,7 @@
     text-decoration: none;
     color: black;
 
-    list-style: noner;
+    list-style: none;
 }
 
 header {
@@ -20,20 +20,20 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    border: solid black 1px;
-
-    margin-bottom: 100px;
+    background-color: #f5f5f5;
+    margin-bottom: 50px;
 }
 
 main {
-    margin: 100px 0;
+    background-color: #f5f5f5;
+    margin: 50px 0;
 
-    border: solid black 1px;
 }
 
 footer {
+    background-color: #f5f5f5;
     margin-top: 100px;
-    border: solid black 1px;
+
 }
 
 
@@ -46,5 +46,21 @@ footer {
 	width: 1144px;
 
     margin: 0 auto;
-    background-color: #f5f5f5;
+   
 }
+
+
+/* HEADER */
+#header-menu a {
+    padding-left: 10px;
+}
+
+/* FOOTER */
+#footer-nav  {
+    display: flex;
+}
+#footer-nav a {
+    padding-right: 20px;
+}
+
+

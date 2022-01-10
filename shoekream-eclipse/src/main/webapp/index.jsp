@@ -24,7 +24,7 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
-				sss
+				
 				<jsp:include page="./main.jsp"/>
 				
 				<!-- Footer -->

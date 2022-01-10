@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
 <!DOCTYPE html>
 <html>
@@ -12,10 +12,10 @@
 		<!-- SCRIPTS -->
 		
 		<!-- STYLE -->
-		<link rel="stylesheet" href="./style.css?ver=1.2">
+		<link rel="stylesheet" href="./css/style.css">
 		
 		<!--INFORMATION -->
-		<title>SHOEKREAM</title>
+		<title>SHOEKREAM - 한정판 중고 거래</title>
 	</head>
 	<body>
 		<div id="app">
@@ -24,6 +24,7 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
+				
 				<jsp:include page="./main.jsp"/>
 				
 				<!-- Footer -->

@@ -24,6 +24,8 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
+				
+				
 				<jsp:include page="./main.jsp"/>
 				
 				<!-- Footer -->

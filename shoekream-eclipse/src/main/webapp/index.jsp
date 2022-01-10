@@ -20,14 +20,14 @@
 	<body>
 		<div id="app">
 			<div id="container">
-					<!-- Header -->
-					<jsp:include page="./header.jsp"/>
-					
-					<!-- Main -->
-					<jsp:include page="./main.jsp"/>
-					
-					<!-- Footer -->
-					<jsp:include page="./footer.jsp"/>
+				<!-- Header -->
+				<jsp:include page="./header.jsp"/>
+				
+				<!-- Main -->
+				<jsp:include page="./main.jsp"/>
+				
+				<!-- Footer -->
+				<jsp:include page="./footer.jsp"/>
 			</div>
 		</div>
 	</body>

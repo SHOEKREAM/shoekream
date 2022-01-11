@@ -55,6 +55,20 @@ footer {
     padding-left: 10px;
 }
 
+/* MAIN */
+#search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#search-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-gap: 20px;
+}
+
+
 /* FOOTER */
 #footer-nav  {
     display: flex;

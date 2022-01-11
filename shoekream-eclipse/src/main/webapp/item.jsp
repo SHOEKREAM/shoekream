@@ -24,7 +24,9 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
-				<jsp:include page="./main.jsp"/>
+				<div>
+					컨텐츠
+				</div>
 				
 				<!-- Footer -->
 				<jsp:include page="./footer.jsp"/>

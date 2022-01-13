@@ -1,6 +1,8 @@
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 
+
+
 * { 
 	font-family: 'Noto Sans KR', sans-serif;
 	padding: 0;
@@ -25,13 +27,13 @@ header {
 }
 
 main {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     margin: 50px 0;
 
 }
 
 footer {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     margin-top: 100px;
 
 }
@@ -51,6 +53,10 @@ footer {
 
 
 /* HEADER */
+
+#header-menu > div {
+	display: flex;
+}
 #header-menu a {
     padding-left: 10px;
 }
@@ -65,16 +71,36 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    grid-gap: 20px;
+    grid-gap: 18px;
 }
 
+#brand-filter {
+	display: flex; 
+	justify-content: center;
+	
+	margin: 40px 0;
+}
+
+.filter-item {
+	cursor: pointer;
+}
+
+.result-item:hover {
+	cursor: ponter;	
+	box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16);
+}
 
 /* FOOTER */
 #footer-nav  {
     display: flex;
+    
+    margin-top: 10px
 }
 #footer-nav a {
     padding-right: 20px;
 }
 
+#footer-notice {
+	margin-top: 10px;
+}
 

@@ -6,8 +6,8 @@
 <!-- MAIN CONTENT -->
 <main>
 	<div id="search-container">
-        <div>
-            <input id="search-input" type="text" placeholder="검색어를 입력해 주세요" onKeypress="javascript:if(event.keyCode===13){search()}">
+        <div style="width: 700px; height:50px; display:flex; justify-content:center; background-color:red; border: none; border-bottom: solid black 1px;">
+            <input id="search-input" style="width:100%" type="text" placeholder="검색어를 입력해 주세요" onKeypress="javascript:if(event.keyCode===13){search()}">
         </div>
     </div>
     <div id="brand-filter">

@@ -65,6 +65,8 @@ footer {
 #search-container {
     display: flex;
     justify-content: center;
+    
+    border: none;
 }
 
 #search-result {
@@ -72,6 +74,11 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     grid-gap: 18px;
+}
+
+
+#search-input:focus {
+	outline: none;
 }
 
 #brand-filter {

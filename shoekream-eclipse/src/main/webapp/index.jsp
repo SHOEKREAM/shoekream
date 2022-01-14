@@ -10,6 +10,8 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
+		<script src="./js/app.js"></script>
+		<script src="./js/jquery-3.6.0.js"></script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">

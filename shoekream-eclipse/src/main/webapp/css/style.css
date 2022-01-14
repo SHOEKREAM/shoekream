@@ -145,6 +145,11 @@ footer {
 	margin-top: 10px;
 }
 
+.info-validation {
+	display: flex;
+	
+}
+
 /* FOOTER */
 #footer-nav  {
     display: flex;

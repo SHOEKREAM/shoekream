@@ -30,31 +30,51 @@
     <div id="brand-filter-container">
         <div class="filter-item" >
             <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">브랜드명</div>
+            <div class="fiter-item-brand">Dunk</div>
         </div>
         <div class="filter-item" >
             <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">브랜드명</div>
-        </div>
-
-        <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">브랜드명</div>
+            <div class="fiter-item-brand">오트리</div>
         </div>
 
         <div class="filter-item" >
             <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">브랜드명</div>
+            <div class="fiter-item-brand">에어포스</div>
         </div>
 
         <div class="filter-item" >
             <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">브랜드명</div>
+            <div class="fiter-item-brand">발렌시아가</div>
         </div>
 
         <div class="filter-item" >
             <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">브랜드명</div>
+            <div class="fiter-item-brand">Jordan 1</div>
+        </div>
+
+        <div class="filter-item" >
+            <div class="fiter-item-cover"></div>
+            <div class="fiter-item-brand">Off-White</div>
+        </div>
+        
+        <div class="filter-item" >
+            <div class="fiter-item-cover"></div>
+            <div class="fiter-item-brand">마르지엘라</div>
+        </div>
+        
+        <div class="filter-item" >
+            <div class="fiter-item-cover"></div>
+            <div class="fiter-item-brand">뉴발란스</div>
+        </div>
+        
+        <div class="filter-item" >
+            <div class="fiter-item-cover"></div>
+            <div class="fiter-item-brand">야스히로</div>
+        </div>
+        
+        <div class="filter-item" >
+            <div class="fiter-item-cover"></div>
+            <div class="fiter-item-brand">YEEZY</div>
         </div>
     </div>
     <div id="search-filter">
@@ -65,80 +85,19 @@
         <div class="result-item" style="width: 272px; height: auto;">
             <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
             <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
+                <div class="info-validation">
+               		<div>인증됨</div>
+					<div><span class="material-icons">verified</span></div>
+				</div>
+                <div class="info-brand">Jordan</div>
+                <div class="info-name">Jordan 1 Retro High OG ...</div>
+                <div class="info-price">1,000,000원</div>
+                <div class="info-wishcount">
+					<span class="material-icons">bookmark_border</span>
+					<div class="info-wishcount-count">1,100회</div>
+				</div>
             </div>
-		</div>
-		
-		<div class="result-item" style="width: 272px; height: auto;">
-            <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
-            <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
-            </div>
-		</div>
-		
-		<div class="result-item" style="width: 272px; height: auto;">
-            <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
-            <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
-            </div>
-		</div>
-		
-		<div class="result-item" style="width: 272px; height: auto;">
-            <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
-            <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
-            </div>
-		</div>
-		
-		<div class="result-item" style="width: 272px; height: auto;">
-            <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
-            <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
-            </div>
-		</div>
-		
-		<div class="result-item" style="width: 272px; height: auto;">
-            <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
-            <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
-            </div>
-		</div>
-		
-		<div class="result-item" style="width: 272px; height: auto;">
-            <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
-            <div class="result-item-info">
-                <div class="info-validation">인증여부</div>
-                <div class="info-brand">브랜드명</div>
-                <div class="info-name">상품명</div>
-                <div class="info-price">가격</div>
-                <div class="info-wishcount">찜</div>
-            </div>
-		</div>
-		
+		</div>	
 		
     </div>
 

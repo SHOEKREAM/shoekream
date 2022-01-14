@@ -10,8 +10,6 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
-		<script src="./js/app.js"></script>
-		<script src="./js/jquery-3.6.0.js"></script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
@@ -26,7 +24,9 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
-				<jsp:include page="./main.jsp"/>
+				<div>
+					컨텐츠
+				</div>
 				
 				<!-- Footer -->
 				<jsp:include page="./footer.jsp"/>

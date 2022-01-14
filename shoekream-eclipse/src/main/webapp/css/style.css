@@ -1,6 +1,8 @@
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 
+
+
 * { 
 	font-family: 'Noto Sans KR', sans-serif;
 	padding: 0;
@@ -20,18 +22,18 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     margin-bottom: 50px;
 }
 
 main {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     margin: 50px 0;
 
 }
 
 footer {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     margin-top: 100px;
 
 }
@@ -51,30 +53,114 @@ footer {
 
 
 /* HEADER */
+
+#header-menu > div {
+	display: flex;
+}
 #header-menu a {
     padding-left: 10px;
 }
 
 /* MAIN */
+#slider-container {
+	width: 100%;
+	height: 200px;
+	
+	background-color: #F5F5F5
+}
+
+#slider-container {
+    width: 100%;
+    height: 200px;
+    
+    background-color: #F5F5F5
+}
+
+.slider-controller {
+    cursor: pointer;
+}
+
 #search-container {
     display: flex;
     justify-content: center;
+    
+    border: none;
 }
 
 #search-result {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    grid-gap: 20px;
+    grid-gap: 16px;
 }
 
+.info-wishcount {
+	display: flex;
+}
+
+
+#search-input:focus {
+	outline: none;
+}
+
+#brand-filter-container {
+	display: flex; 
+	justify-content: center;
+	
+	margin: 40px 0;
+}
+
+.filter-item {
+	
+	width: 80px; 
+	height: 80px; 
+	text-align: center;
+	cursor: pointer;
+}
+
+.filter-item div:nth-child(1) {
+	width: 50px; 
+	height: 50px;
+	
+	margin: 0 auto;
+	background-color: #F5F5F5;
+}
+
+.filter-item div:nth-child(2) {
+	margin-top: 4px;
+	
+	text-align: center;
+}
+
+.result-item-cover {
+	border: none;
+	background-color: #F5F5F5;
+}
+.result-item:hover {
+	cursor: pointer;
+	box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16);
+}
+
+.result-item-info {
+	margin-top: 10px;
+}
+
+.info-validation {
+	display: flex;
+	
+}
 
 /* FOOTER */
 #footer-nav  {
     display: flex;
+    
+    margin-top: 10px
 }
 #footer-nav a {
     padding-right: 20px;
 }
 
+#footer-notice {
+	margin-top: 10px;
+}
 

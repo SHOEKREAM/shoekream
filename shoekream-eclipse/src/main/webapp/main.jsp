@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-   
+
+<!-- SCRIPTS -->
+<script src="./js/jquery-3.6.0.js"></script>
+
 <!-- STYLE -->
 <link rel="stylesheet" href="./css/style.css"> 
 
 <!-- MAIN CONTENT -->
 <main>
 	<div id="search-container">
-        <div style="width: 700px; height:50px; display:flex; justify-content:center; background-color:red; border: none; border-bottom: solid black 1px;">
-            <input id="search-input" style="width:100%" type="text" placeholder="검색어를 입력해 주세요" onKeypress="javascript:if(event.keyCode===13){search()}">
+        <div style="width: 700px; height:50px; display:flex; border: none; border-bottom: solid black 2px;">
+            <input id="search-input" style="width:666px; border: none; margin: 0 10px" type="text" placeholder="검색어를 입력해 주세요" onKeypress="javascript:if(event.keyCode===13){search()}" onkeyup="notifyStatusSearch()">
+            <div id="input-clear-container" style="display: flex; align-items: center;" onclick="clearSearchText()">
+                <span class="material-icons">close</span>
+            </div>
         </div>
     </div>
     <div id="brand-filter">

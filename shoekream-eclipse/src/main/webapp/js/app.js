@@ -39,3 +39,8 @@ function unfoldNotice(id)
 {
     $("#notice-"+id).toggle();
 }
+
+function unfoldFAQ(id)
+{
+	$("#answer-"+id).toggle();
+}

@@ -10,30 +10,14 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
-		<script src="./js/jquery-3.6.0js"></script>
+		<script src="./js/app.js"></script>
+		<script src="./js/jquery-3.6.0.js"></script>
+
 		<script>
 			window.onload = function()
 			{
-				$(".notice_wrap").hide();
+				$(".faq-wrap").hide();
 			}
-			function ShowNotice(id)
-			{
-				$("#notice"+id).toggle();
-			}
-			/*
-			선생님이 알려주신 방식			
-			var old_obj = null; 
-			
-			function ShowNotice(obj)
-			{
-				if( old_obj != null)
-				{
-					$(old_obj).parent().parent().next().hide();
-				}
-				$(obj).parent().parent().next().show();
-				old_obj = obj;
-			}
-			*/
 		</script>
 		
 		
@@ -51,6 +35,37 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
+				
+				<div>
+					<div id="support-container" style="display: flex">
+		                <div id="support-nav-container" >
+		                    <div><a href="./notice.jsp"><h1>#공지사항</h1></a></div>
+		                    <div><a href="./faq.jsp"><h1>#자주묻는질문</h1></a></div>
+		                    <div><a href="./policy.jsp"><h1>#검수기준</h1></a></div>
+		                    <div><a href="./inquire.jsp"><h1>#문의하기</h1></a></div>
+		                </div>
+		                
+		                 <div id="support-container-content" style=" width:100%">
+		                    <div id="container-content-header"><h2>자주묻는질문</h2></div>
+		                    
+		                    <div id="content-container">
+		                        <div id="faq-container">
+		                            <div class="faq-item">
+		                                <div id="faq-item-info">
+		                                    <div id="question" onclick="unfoldFAQ(1)">Q. aaa</div>
+		                                    <div id="answer-1" class="faq-wrap">A. bbb</div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+	                    </div>
+		    
+	                </div>
+	                
+	                
+                </div>
+				
+				<!-- 
 				<div>
 					<table border="0" style="width:300px; height:500px; float:left;">
 						<tr>
@@ -62,6 +77,7 @@
 							</td>
 						</tr>
 					</table>
+					
 					<table border="0" style="width:800px; height:100%; float:center;">
 						<h2>자주 묻는 질문</h2>
 						<tr><td style="border-bottom:1px solid; height:1px;" colspan="3"></td></tr>
@@ -88,7 +104,7 @@
 							</td>
 						</tr>
 					</table>
-				</div>
+				</div> -->
 				
 				<!-- Footer -->
 				<jsp:include page="./footer.jsp"/>

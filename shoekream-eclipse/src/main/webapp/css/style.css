@@ -161,6 +161,8 @@ footer {
 
 #container-content-header {
     margin-bottom: 10px;
+    border-bottom: solid black 1px;
+    padding-bottom: 10px
 }
 
 .notice_wrap {
@@ -179,7 +181,7 @@ footer {
     width: 80px;
 }
 
-#notice-table {
+#notice-table, #faq-tatble {
     width: 100%;
     border-collapse: collapse;
 }
@@ -189,7 +191,7 @@ footer {
 }
 
 #notice-head {
-    border-bottom: solid black 1px;
+    /* border-bottom: solid black 1px; */
 }
 
 #notice-head, #notice-item {

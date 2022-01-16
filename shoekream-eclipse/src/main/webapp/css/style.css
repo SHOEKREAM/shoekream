@@ -55,6 +55,19 @@ button:hover {
 }
 
 
+input[type="number"] {
+	border: none;
+	border-bottom: solid black 1px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
 #app {
     width: 100vw;
     height: 100vh;
@@ -194,27 +207,18 @@ button:hover {
 	box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16);
 }
 
-.result-item-info {
-	margin-top: 10px;
-}
+.result-item-info { margin-top: 10px; }
 
-.info-validation {
-	display: flex;
-	
-}
+.info-validation { display: flex; }
 
-#support-container {
-	display: flex;
-}
+#support-container { display: flex; }
 
 #support-nav-container {
     width: 250px;
     margin-right: 100px;
 }
 
-#support-container-content {
-	width: 100%;
-}
+#support-container-content { bwidth: 100%; }
 #support-nav-container div {
     margin-bottom: 20px;
 }
@@ -225,23 +229,16 @@ button:hover {
     padding-bottom: 10px
 }
 
-.notice_wrap {
-    margin-bottom: 10px;
-}
+.notice_wrap { margin-bottom: 10px; }
 
 #notice-head-n {
     width: 50px;
     text-align: left;
 }
-#notice-head-title {
-    text-align: left;
-}
+#notice-head-title { text-align: left; }
+#notice-head-date { width: 80px; }
 
-#notice-head-date {
-    width: 80px;
-}
-
-#notice-table, #faq-tatble, #help-table {
+#notice-table, #faq-tatble, #help-table, #mypage-table, #wishlist-table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -254,9 +251,7 @@ button:hover {
     /* border-bottom: solid black 1px; */
 }
 
-#notice-head, #notice-item {
-    height: 30px;
-}
+#notice-head, #notice-item { height: 30px; }
 #help-input-content {
 	width:100%; 
 	height:300px; 
@@ -276,53 +271,44 @@ button:hover {
 	border: none;
 	
 	text-align: center
-	
-	
 }
 
-.button-positive {
-	background-color: #5ED1E9;
-}
-
-.button-negative {
-	background-color: #E95E5E;
-}
-
+.button-positive { background-color: #5ED1E9; }
+.button-negative { background-color: #E95E5E; }
 
 #mypage-table {
 	width: 100%;
 	border-collapse: collapse;
 }
+#mypage-table tr { height: 80px; }
+#mypage-head { width:100px; }
 
 
-#mypage-table tr{
-	height: 80px;
+#wishlist-table { margin-top: 50px }
+#wishlist-head, #wishlist-item { height: 50px }
+#wishlist-head-n {
+	width:70px;
+}
+#wishlist-head-seller{
+	width:100px
 }
 
-#mypage-head {
-	width:100px	
+#wishlist-head-n, #wishlist-item-n,
+#wishlist-head-title, #wishlist-item-title {
+	text-align: left;
 }
 
+#wishlist-head-seller, .wishlist-item-seller { text-align: center; }
+#wishlist-item:hover {
+	background-color: #F5F5F5;
+}
 
-#editor {
-	
-	width : 100%;
-}
-input[type="number"] {
-	border: none;
-	border-bottom: solid black 1px;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+#editor { width : 100%; }
 
 
 /* FOOTER */
 #footer-nav  {
     display: flex;
-    
     margin-top: 10px
 }
 #footer-nav a {

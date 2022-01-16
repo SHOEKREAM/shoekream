@@ -65,17 +65,7 @@
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
 		<style>
-			input[type=text], input[type=password]
-			{
-				border: 0px;
-				border-bottom: #B0B0B0 1px solid;
-				width: 220px;
-			}
 			
-			input:focus
-			{
-				outline: none;
-			}
 			td
 			{
 				height: 50px;

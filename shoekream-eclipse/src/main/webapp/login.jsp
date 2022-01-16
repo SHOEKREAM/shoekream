@@ -13,73 +13,29 @@
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
-		<style>
-			input[type=text], input[type=password]
-			{
-				border: 0px;
-				border-bottom: #B0B0B0 1px solid;
-				width: 330px;
-			}
-
-			input:focus
-			{
-				outline: none;
-			}
-			td
-			{
-				height: 50px;
-			}
-			.loginBtn
-			{
-				color:white;
-				width:330px;
-				height:60px;
-				background-color:#FF9595;
-				text-align:center;
-				display:table-cell;
-				vertical-align:middle;
-			}
-		</style>
 		
 		<!--INFORMATION -->
 		<title>SHOEKREAM - 한정판 중고 거래</title>
 	</head>
     
     <body>
-    	<table border="0" width="340px" align="center">
-			<tr>
-				<td style="font-size:48px; height:150px;"><b>로그인 하기</b></td>
-			</tr>
-			<tr>
-				<td>아이디</td>
-			</tr>
-			<tr>
-				<td><input type="text" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-			</tr>
-			<tr>
-				<td><input type="password" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox">아이디 저장</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="#" style="text-decoration:none"><div class="loginBtn">로그인</div></a>
-				</td>
-			</tr>
-			<tr>
-				<td style="text-align:center; font-size:20px;">
-					<a href="join.html" style="color:black; text-decoration:none">회원가입</a>
-				</td>
-			</tr>
-			<tr>
-				<td style="text-align:center;">
-					<a href="accountfind.html" style="color:black; text-decoration:none"><b>아이디</b> 또는 <b>비밀번호</b>가 생각나지 않아요</a>
-				</td>
-			</tr>
-		</table>
+    	<div id="app" style="display:flex;">
+    		<div id="login-cover"></div>
+    		<div id="login-container">
+		    		<div id="login-wrap">
+		    			<div>
+		    				<div id="login-title"><h1>로그인 하기</h1></div>
+							<div id="login-text">아이디</div>
+							<div><input type="text" style="font-size:20px;"></div>
+							<div id="">비밀번호</div>
+							<div><input type="password" style="font-size:20px;"></div>
+							<div><input type="checkbox" style=" margin-right: 4px">아이디 저장</div>
+							<div class="default-button button-positive">로그인</div>
+							<div><a href="./signup.jsp"><b>회원가입</b></a> 또는 <a href="./reset.jsp"><b>아이디</b> 또는 <b>비밀번호</b>가 생각나지 않아요</a></div>
+		    			</div>
+		    		</div>
+		    	</div>
+    	</div>
+    	
     </body>
 </html>

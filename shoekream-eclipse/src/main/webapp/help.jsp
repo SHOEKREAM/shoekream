@@ -15,19 +15,6 @@
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
 		<style>
-			.btn {
-				color:white;
-				width:110px;
-				height:50px;
-				display:inline-block;
-				box-sizing:border-box;
-				padding:14px 0px;
-			}
-			
-			a{
-				text-decoration:none;
-				color:black;
-			}
 		</style>
 		
 		<!--INFORMATION -->
@@ -73,55 +60,21 @@
 									<textarea id="help-input-content"></textarea>
 									</td>
 								</tr>
-								<tr>
+								<!-- <tr>
 									<td colspan="2" style="text-align:center;">
 										<a href="#"><span class="btn" style="background-color: #5ED1E9;">문의하기</span></a>
 										&nbsp;&nbsp;&nbsp;
 										<a href="#"><span class="btn" style="background-color: #E95E5E;">취소</span></a>
 									</td>
-								</tr>
+								</tr> -->
 		                    </table>
+		                    <div style="display: flex; justify-content: center;">
+		                    	<button class="help-button button-positive">문의하기</button>
+		                    	<button class="help-button button-negative">취소</button>
+		                    </div>
 	                    </div>
                     </div>
-					<!-- <table border="0" style="width:300px; height:500px; float:left;">
-						
-					</table>
-					<table border="0" style="width:800px; height:100%; float:center;">
-						<h2>문의하기</h2>
-						<tr><td style="border-bottom:1px solid; height:1px;" colspan="2"></td></tr>
-						<tr>
-							<td style="width:100px;">이름</td>
-							<td>슈크림</td>
-						</tr>
-						<tr>
-							<td>구분</td>
-							<td>
-								<input type="radio" name="kind">상품문의
-								<input type="radio" name="kind">이의제기
-							</td>
-						</tr>
-						<tr>
-							<td>제목</td>
-							<td>
-								<input type="text">
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">문의내용</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-							<textarea style="width:100%; height:300px; resize: none;"></textarea>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" style="text-align:center;">
-								<a href="#"><span class="btn" style="background-color: #5ED1E9;">문의하기</span></a>
-								&nbsp;&nbsp;&nbsp;
-								<a href="#"><span class="btn" style="background-color: #E95E5E;">취소</span></a>
-							</td>
-						</tr>
-					</table> -->
+				
 				</div>
 				
 				<!-- Footer -->

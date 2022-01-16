@@ -203,6 +203,26 @@ footer {
 	resize: none;	
 }
 
+.help-button {
+	width:110px;
+	height:50px;
+	padding:14px 0px;
+	
+	color:white;
+	background-color:none;
+	border: none;
+	
+	margin: 10px 10px;
+}
+
+.button-positive {
+	background-color: #5ED1E9;
+}
+
+.button-negative {
+	background-color: #E95E5E;
+}
+
 /* FOOTER */
 #footer-nav  {
     display: flex;

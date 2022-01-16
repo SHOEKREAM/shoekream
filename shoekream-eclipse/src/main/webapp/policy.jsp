@@ -12,16 +12,7 @@
 		<!-- SCRIPTS -->
 		
 		<!-- STYLE -->
-		<link rel="stylesheet" href="./css/style.css">
-
-		<style>
-		a
-		{
-			text-decoration:none;
-			color:black;
-		}
-		</style>
-		
+		<link rel="stylesheet" href="./css/style.css">		
 		
 		<!--INFORMATION -->
 		<title>SHOEKREAM - 한정판 중고 거래</title>
@@ -30,29 +21,24 @@
     <body>
 	    <div id="app">
 			<div id="container">
+			
 				<!-- Header -->
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
-				<div>
-					<table border="0" style="width:300px; height:1000px; float:left;">
-						<tr>
-							<td valign="top">
-								<div style="height:100px;"><a href="./notice.jsp">공지사항</a></div>
-											<div style="height:100px;"><a href="./faq.jsp">자주 묻는 질문</a></div>
-											<div style="height:100px;"><a href="./policy.jsp">검수 기준</a></div>
-											<div style="height:100px;"><a href="./help.jsp">문의하기</a></div>
-							</td>
-						</tr>
-					</table>
-					<table border="0" style="width:800px; height:100%; float:center;">
-						<h2>검수 기준</h2>
+				<div id="support-container">
+	                <div id="support-nav-container" >
+	                    <div><a href="./notice.jsp"><h1>#공지사항</h1></a></div>
+	                    <div><a href="./faq.jsp"><h1>#자주묻는질문</h1></a></div>
+	                    <div><a href="./policy.jsp"><h1>#검수기준</h1></a></div>
+	                    <div><a href="./help.jsp"><h1>#문의하기</h1></a></div>
+	                </div>
+	                
+	                <div id="support-container-content">
+	                    <div id="container-content-header"><h2>검수기준</h2></div>
 						<div>
-							<p>
-								<b>[업데이트] 2021/11/29 월</b>
-							</p>
-							<p>
-								<b>[적용일시] 2021/12/03 금 00:00 체결 건 부터</b>
+							<p><b>[업데이트] 2021/11/29 월</b></p>
+							<p><b>[적용일시] 2021/12/03 금 00:00 체결 건 부터</b>
 							</p>
 							<p>
 								<span>KREAM</span>의 검수기준은 거래 당사자간 원활한 거래와 보다 균형있는 검수기준 확립을 위해 지속적으로 업데이트 되고 있습니다.<br>
@@ -81,13 +67,12 @@
 								KREAM의 검수기준에 동의하지 않으실 경우 거래가 불가하오니 거래 당사자는 거래에 앞서 KREAM의 검수기준을 반드시 검토하시기 바랍니다.
 			                </p>
 						</div>
-					</table>
-				</div>
-				
+                    </div>
+                </div>
+
 				<!-- Footer -->
 				<jsp:include page="./footer.jsp"/>
 			</div>
 		</div>
-    	
     </body>
 </html>

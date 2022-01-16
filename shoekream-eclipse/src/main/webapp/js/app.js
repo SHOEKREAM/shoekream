@@ -34,3 +34,13 @@ function notifyNextSlide() {
 function notifyBackSlide() {
     console.log('back');
 }
+
+function unfoldNotice(id)
+{
+    $("#notice-"+id).toggle();
+}
+
+function unfoldFAQ(id)
+{
+	$("#answer-"+id).toggle();
+}

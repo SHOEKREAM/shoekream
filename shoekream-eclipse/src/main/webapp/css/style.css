@@ -150,6 +150,86 @@ footer {
 	
 }
 
+#support-container {
+	display: flex;
+}
+
+#support-nav-container {
+    width: 250px;
+    margin-right: 100px;
+}
+
+#support-container-content {
+	width: 100%;
+}
+#support-nav-container div {
+    margin-bottom: 20px;
+}
+
+#container-content-header {
+    margin-bottom: 10px;
+    border-bottom: solid black 1px;
+    padding-bottom: 10px
+}
+
+.notice_wrap {
+    margin-bottom: 10px;
+}
+
+#notice-head-n {
+    width: 50px;
+    text-align: left;
+}
+#notice-head-title {
+    text-align: left;
+}
+
+#notice-head-date {
+    width: 80px;
+}
+
+#notice-table, #faq-tatble, #help-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#notice-table tbody{
+    vertical-align: top;
+}
+
+#notice-head {
+    /* border-bottom: solid black 1px; */
+}
+
+#notice-head, #notice-item {
+    height: 30px;
+}
+#help-input-content {
+	width:100%; 
+	height:300px; 
+	resize: none;	
+}
+
+.help-button {
+	width:110px;
+	height:50px;
+	padding:14px 0px;
+	
+	color:white;
+	background-color:none;
+	border: none;
+	
+	margin: 10px 10px;
+}
+
+.button-positive {
+	background-color: #5ED1E9;
+}
+
+.button-negative {
+	background-color: #E95E5E;
+}
+
 /* FOOTER */
 #footer-nav  {
     display: flex;

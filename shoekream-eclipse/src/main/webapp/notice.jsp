@@ -34,53 +34,53 @@
 				<!-- Main -->
 				<div>
 					<div id="support-container" style="display: flex">
-                <div id="support-nav-container" >
-                    <div><a href="./notice.jsp"><h1>#공지사항</h1></a></div>
-                    <div><a href="./faq.jsp"><h1>#자주묻는질문</h1></a></div>
-                    <div><a href="./policy.jsp"><h1>#검수기준</h1></a></div>
-                    <div><a href="./inquire.jsp"><h1>#문의하기</h1></a></div>
-                </div>
-                <div id="support-container-content" style=" width:100%">
-                    <div id="container-content-header"><h2>공지사항</h2></div>
-    
-                    <div id="content-container">
-                        <table id="notice-table" >
-                            <thead id="notice-head">
-                                <tr>
-                                    <th id="notice-head-n">#</th>
-                                    <th id="notice-head-title">제목</th>
-                                    <th id="notice-head-date">날짜</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr id="notice-item" >
-                                    <td class="notice-n">1</td>
-                                    <td class="notice-title" onclick="unfoldNotice(1)">
-                                        aa
-                                    	<div id="notice-1" class="notice-wrap">
-                                    	    sss
-                                    	</div>
-                                    </td>
-                                    <td class="notice-date">2022/01/16</td>
-                                </tr>
-
-                                <tr id="notice-item">
-                                    <td class="notice-n">1</td>
-                                    <td class="notice-title" onclick="unfoldNotice(2)">
-                                        aa
-                                    	<div id="notice-2" class="notice-wrap">
-                                    	    sss
-                                    	</div>
-                                    </td>
-                                    <td class="notice-date">2022/01/16</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            
-            </div>
+		                <div id="support-nav-container" >
+		                    <div><a href="./notice.jsp"><h1>#공지사항</h1></a></div>
+		                    <div><a href="./faq.jsp"><h1>#자주묻는질문</h1></a></div>
+		                    <div><a href="./policy.jsp"><h1>#검수기준</h1></a></div>
+		                    <div><a href="./inquire.jsp"><h1>#문의하기</h1></a></div>
+		                </div>
+		                <div id="support-container-content" style=" width:100%">
+		                    <div id="container-content-header"><h2>공지사항</h2></div>
+		    
+		                    <div id="content-container">
+		                        <table id="notice-table" >
+		                            <thead id="notice-head">
+		                                <tr>
+		                                    <th id="notice-head-n">#</th>
+		                                    <th id="notice-head-title">제목</th>
+		                                    <th id="notice-head-date">날짜</th>
+		                                </tr>
+		                            </thead>
+		                            <tbody>
+		                                <tr id="notice-item" >
+		                                    <td class="notice-n">1</td>
+		                                    <td class="notice-title" onclick="unfoldNotice(1)">
+		                                        aa
+		                                    	<div id="notice-1" class="notice-wrap">
+		                                    	    sss
+		                                    	</div>
+		                                    </td>
+		                                    <td class="notice-date">2022/01/16</td>
+		                                </tr>
+		
+		                                <tr id="notice-item">
+		                                    <td class="notice-n">1</td>
+		                                    <td class="notice-title" onclick="unfoldNotice(2)">
+		                                        aa
+		                                    	<div id="notice-2" class="notice-wrap">
+		                                    	    sss
+		                                    	</div>
+		                                    </td>
+		                                    <td class="notice-date">2022/01/16</td>
+		                                </tr>
+		
+		                            </tbody>
+		                        </table>
+		                    </div>
+		                </div>
+		            
+		            </div>
 				</div>
 				
 				<!-- Footer -->

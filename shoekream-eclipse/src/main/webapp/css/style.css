@@ -150,11 +150,18 @@ footer {
 	
 }
 
+#support-container {
+	display: flex;
+}
+
 #support-nav-container {
     width: 250px;
     margin-right: 100px;
 }
 
+#support-container-content {
+	width: 100%;
+}
 #support-nav-container div {
     margin-bottom: 20px;
 }

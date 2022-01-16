@@ -28,17 +28,17 @@
 				
 				<!-- Main -->
 				<div>
-					<div id="support-container" style="display: flex">
+					<div id="support-container">
 		                <div id="support-nav-container" >
 		                    <div><a href="./notice.jsp"><h1>#공지사항</h1></a></div>
 		                    <div><a href="./faq.jsp"><h1>#자주묻는질문</h1></a></div>
 		                    <div><a href="./policy.jsp"><h1>#검수기준</h1></a></div>
 		                    <div><a href="./inquire.jsp"><h1>#문의하기</h1></a></div>
 		                </div>
-		                <div id="support-container-content" style=" width:100%">
+		                <div id="support-container-content">
 		                    <div id="container-content-header"><h2>문의하기</h2></div>
 		                    <table id="help-table">
-		                    	<tr><td style="height:1px;" colspan="2"></td></tr>
+		       
 								<tr>
 									<td style="width:100px;">이름</td>
 									<td>슈크림</td>
@@ -60,13 +60,6 @@
 									<textarea id="help-input-content"></textarea>
 									</td>
 								</tr>
-								<!-- <tr>
-									<td colspan="2" style="text-align:center;">
-										<a href="#"><span class="btn" style="background-color: #5ED1E9;">문의하기</span></a>
-										&nbsp;&nbsp;&nbsp;
-										<a href="#"><span class="btn" style="background-color: #E95E5E;">취소</span></a>
-									</td>
-								</tr> -->
 		                    </table>
 		                    <div style="display: flex; justify-content: center;">
 		                    	<button class="help-button button-positive">문의하기</button>

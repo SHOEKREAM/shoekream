@@ -150,6 +150,52 @@ footer {
 	
 }
 
+#support-nav-container {
+    width: 250px;
+    margin-right: 100px;
+}
+
+#support-nav-container div {
+    margin-bottom: 20px;
+}
+
+#container-content-header {
+    margin-bottom: 10px;
+}
+
+.notice_wrap {
+    margin-bottom: 10px;
+}
+
+#notice-head-n {
+    width: 50px;
+    text-align: left;
+}
+#notice-head-title {
+    text-align: left;
+}
+
+#notice-head-date {
+    width: 80px;
+}
+
+#notice-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#notice-table tbody{
+    vertical-align: top;
+}
+
+#notice-head {
+    border-bottom: solid black 1px;
+}
+
+#notice-head, #notice-item {
+    height: 30px;
+}
+
 /* FOOTER */
 #footer-nav  {
     display: flex;

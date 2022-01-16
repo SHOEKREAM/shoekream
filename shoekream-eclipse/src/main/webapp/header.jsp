@@ -16,7 +16,7 @@
         <a href="./wishlist.jsp">찜 목록</a>
         <div style=" display:inline; position: relative; padding: 4px 2px;" >
            <span class="material-icons" style="display:inline; position: absolute; right: 0; top: 0;  font-size: 14px; color: red; background-color: white; border-radius: 100%; border: solid white 1px">circle</span>
-           <a href="./signup.jsp" style="display:inline">나의 채팅</a>
+           <a href="./mychat.jsp" style="display:inline">나의 채팅</a>
         </div>
         <a href="./logut.jsp">로그아웃</a>
     </div>

@@ -303,6 +303,20 @@ input[type="number"]::-webkit-inner-spin-button {
 	background-color: #F5F5F5;
 }
 
+#mychat-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+	margin-top: 50px;
+	
+	border: solid black 1px;
+	
+}
+
+.mylist-list-item {
+	display: flex;
+}
+
 #editor { width : 100%; }
 
 

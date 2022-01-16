@@ -11,53 +11,16 @@
 
 		<!-- SCRIPTS -->
 		<script src="./js/jquery-3.6.0.js"></script>
+		<script src="./js/app.js"></script>
 		<script>
-       		function memberRetire()
-		 	{
-		 		$(".bg_content").show();
-		 		$(".notice_content").show();
-		 				 		
-		 	}
-		 	
-		 	function myclose() 
-  			{ 		 		 
-		 		$(".bg_content").hide();
-		 		$(".notice_content").hide();		         
-  			}
-		 	
-  			function showPopuppw() 
-  			{ window.open("password.jsp", "비밀번호변경", "width=500, height=300, left=100, top=50"); }
-  			
-  			function showPopupmail() 
-  			{ window.open("email.jsp", "이메일변경", "width=500, height=300, left=100, top=50"); }
-  			
-  			function showPopuptel() 
-  			{ window.open("tel.jsp", "전화번호변경", "width=500, height=300, left=100, top=50"); }
- 
-  			function findAddr(){
-  				new daum.Postcode({
-  			        oncomplete: function(data) 
-  			        {  			        	
-  			        	console.log(data);  			        	
-  			            var roadAddr = data.roadAddress; // 도로명 주소 변수
-  			            var jibunAddr = data.jibunAddress; // 지번 주소 변수
-  			            // 우편번호와 주소 정보를 해당 필드에 넣는다.
-  			            document.getElementById('postal').value = data.zonecode;
-  			            if(roadAddr !== ''){
-  			                document.getElementById("adress").value = roadAddr;
-  			            }else if(jibunAddr !== ''){
-  			                document.getElementById("adress").value = jibunAddr;
-  			            }
-  			        }
-  			    }).open();
-  			}  	
+       		
         </script>
         <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
 		<style>
-        	table 
+        	/* table 
 			{
 				margin-left: auto;
 				margin-right: auto;
@@ -273,7 +236,7 @@
 			height: 200px;
 			background-color: white;
 			z-index: 101;	
-		}	    
+		}	    */ 
         </style>
 		
 		<!--INFORMATION -->
@@ -287,77 +250,64 @@
 				
 				<!-- Main -->
 				<div>
-					<form name="mypage" id="mypage" method="post" action="mypage.html">			
-            
-            <table border="1" align="center" width="1200px" height="500px">
-                <tr align="center">
-                    <td colspan="3">마이페이지</td>
-                </tr>
-                <tr>												
-                    <td>이름</td>
-                    <td>슈크림</td>
-                </tr>
-                <tr>			
-                    <td>비밀번호</td>
-                    <td>
-                    <input type="password"  size="20" >
-                    <input type="button" value="비밀번호 변경" onclick="showPopuppw();">
-                    </td>
-                </tr>
-                <tr>				
-                    <td>이메일</td>
-                    <td>
-                    <input type="text"  size="20" >
-                    @
-                    <input type="text"  size="20" >
-                    <input type="button" value="이메일 변경" onclick="showPopupmail();">
-                    </td>
-                </tr>
-                <tr>					
-                    <td>연락처</td>
-                    <td>
-                    <input type="text"  size="5" >
-                    -
-                    <input type="text"  size="5" >
-                    -
-                    <input type="text"  size="5" >
-                    <input type="button" value="연락처 변경" onclick="showPopuptel();">
-                    </td>
-                </tr>
-                <tr>
-                    <td>주소</td>
-                    <td>우편번호 <input type="text"  size="10" id="postal" name="postal" >
-                    <input type="button"    value="우편번호" onclick="findAddr()"><br>
-                    기본주소 <input type="text"  id="adress" name="adress" size="45" ><br>
-                    나머지주소 <input type="text"  id="remainder" name="remainder" size="45" >						
-                    </td>
-                </tr>
-                <tr>
-                    <td>가입일</td>
-                    <td>
-                        2022-01-04  D+10
-                    </td>
-                </tr>
-                <tr align="center">					
-                    <td rowspan="2" colspan="3" align="center">
-                        <div style="display:inline; height:70px;padding-left:20px;">
-                        <input class="mybutton" type="button" value="변경완료" onclick="">						
-                        </div>
-                        <div style="display:inline; height:70px;padding-left:20px;">
-                        <input class="mybutton2"  type="button" value="회원탈퇴" onclick="memberRetire();">						
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </form>	
-        <div class="bg_content" id="bg_content">
-        </div>
-        <div class="notice_content" id="notice_content" align="center">
-            <br><br>알립니다.<br><br>
-            회원탈퇴를 할 경우, 모든 정보가 삭제됩니다.<br><br>
-            <input id="close" class="mybutton"  type="button" value="예" onclick="myclose();">
-            <input id="close" class="mybutton2" type="button" value="아니오" onclick="myclose();">		
-        </div>	
+					<h1>마이페이지</h1>
+					
+					<form method="post" action="#">
+						<table id="mypage-table">
+							<tr>
+								<td id="mypage-head">이름</td>
+								<td id="mypage-name">ㅁㅁ</td>
+							</tr>
+							
+							<tr>
+								<td id="mypage-head">비밀번호</td>
+								<td id="mypage-password">
+									<input type="password"  size="20" >
+		                    		<input type="button" value="비밀번호 변경" onclick="showPopuppw();">
+								</td>
+							</tr>
+							
+							<tr>
+								<td id="mypage-head">이메일</td>
+								<td id="mypage-password">
+									<input type="text"  size="20" >
+				                    @
+				                    <input type="text"  size="20" >
+				                    <input type="button" value="이메일 변경" onclick="showPopupmail();">
+								</td>
+							</tr>
+							
+							<tr>					
+			                    <td id="mypage-head">연락처</td>
+			                    <td>
+				                    <input type="text"  size="5" > - <input type="text"  size="5" > - <input type="text"  size="5" >
+				                    <input type="button" value="연락처 변경" onclick="showPopuptel();">
+		                    	</td>
+		                	</tr>
+			                <tr>
+			                    <td id="mypage-head">주소</td>
+			                    <td>
+			                    	<div>
+			                    		우편번호 <input type="text" size="10" id="postal" name="postal">
+			                    		<input type="button" value="우편번호" onclick="findAddrss()"><br>
+			                    	</div>
+				                    
+				                    기본주소 <input type="text" id="adress" name="adress" size="45" ><br>
+				                    나머지주소 <input type="text" id="remainder" name="remainder" size="45" >						
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td id="mypage-head">가입일</td>
+			                    <td>2022-01-04  D+10</td>
+			                </tr>
+			                
+						</table>
+						
+						<div stly="display: flex; justify-content: center">
+							<button class="default-button button-positive" onclick="applyMypage()">변경하기</button>	
+							<button class="default-button button-negative" onclick="unregister();">회원탈퇴</button>						
+						</div>
+					</form>
 				</div>
 				
 				<!-- Footer -->

@@ -50,6 +50,10 @@ input[type=text], input[type=password]
 	width: 330px;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 
 #app {
     width: 100vw;
@@ -79,8 +83,7 @@ input[type=text], input[type=password]
 			
 }
 
-#login-cover {
-	
+#login-cover, #signup-cover {
 	width: 50%;
 	height: 100%;
 	background-image: url(https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
@@ -98,6 +101,16 @@ input[type=text], input[type=password]
 }
 
 #login-wrap {
+	display: flex;
+	align-items: conter;
+}
+
+#signup-container {
+	width: 50%;
+	
+}
+
+#signup-wrap {
 	display: flex;
 	align-items: conter;
 }
@@ -276,9 +289,33 @@ input[type=text], input[type=password]
 }
 
 
+#mypage-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+
+#mypage-table tr{
+	height: 80px;
+}
+
+#mypage-head {
+	width:100px	
+}
+
+
 #editor {
 	
 	width : 100%;
+}
+input[type="number"] {
+	border: none;
+	border-bottom: solid black 1px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 

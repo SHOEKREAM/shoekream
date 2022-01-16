@@ -13,7 +13,8 @@
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		<script src="./js/jquery-3.6.0js"></script>
 		<script>
-		    function sample6_execDaumPostcode() {
+		    //function sample6_execDaumPostcode() {
+		    function showDaumPostcode() {
 		        new daum.Postcode({
 		            oncomplete: function(data) {
 		                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
@@ -87,85 +88,81 @@
 	</head>
     
     <body>
-    	<table border="0" width="500px" align="center">
-			<tr>
-				<td style="font-size:48px; height:150px;" colspan="2"><b>회원가입 하기</b></td>
-			</tr>
-			<tr>
-				<td>아이디</td>
-				<td>이름</td>
-			</tr>
-			<tr>
-				<td><input type="text" style="font-size:20px;"></td>
-				<td><input type="text" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td>비밀번호 확인</td>
-			</tr>
-			<tr>
-				<td><input type="password" style="font-size:20px;"></td>
-				<td><input type="password" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td colspan="2">전화번호</td>
-			<tr>
-			<tr>
-				<td colspan="2">
-					<select>
-						<option>010</option>
-						<option>011</option>
-						<option>017</option>
-						<option>018</option>
-					</select>
-					&nbsp;&nbsp;-
-					<input type="text" style="font-size:20px; width:80px;">
-					&nbsp;&nbsp;-&nbsp;&nbsp;
-					<input type="text" style="font-size:20px; width:80px;">
-				</td>
-			<tr>
-			<tr>
-				<td colspan="2">이메일</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input type="text" style="font-size:20px; width:170px;">@
-					<input type="text" style="font-size:20px; width:170px;">
-					<select>
-						<option>직접 입력</option>
-						<option>naver.com</option>
-						<option>hanmail.net</option>
-						<option>gmail.com</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">주소</td>
-			</tr>
-			<tr>
-				<td colspan="2" style="height:150px;">
-					<input type="text" id="sample6_postcode" placeholder="우편번호" style="height:50px; font-size:15px;">
-					<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-					<input type="text" id="sample6_address" placeholder="주소" style="height:50px; font-size:15px;"><br>
-					<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="height:50px; font-size:15px;">
-					<input type="text" id="sample6_extraAddress" placeholder="참고항목" style="height:50px; font-size:15px; width:260px;">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" style="text-align:center; height:100px;">
-					<input type="checkbox"><b style="color:#728CF3;">이용약관</b> 과 <b style="color:#E78E67;">개인정보 제공</b>에 동의합니다.
-				</td>
-			</tr>
-			<tr>
-				<td style="text-align:center; font-size:20px;" colspan="2">
-					<a href="#" style="color:black; text-decoration:none">
-						<span class="btn" style="background-color: #FF9595; width:250px;">회원가입</span>
-					</a>
-					<a href="#" style="color:black; text-decoration:none">
-						<span class="btn" style="background-color: #0078D7;">취소</span>
-					</a>
-				</td>
-			</tr>
-		</table>
+	    <div id="app" style="display:flex;">
+    		<div id="signup-cover"></div>
+    		<div id="signup-container">
+	    		<div id="signup-wrap">
+	    			<div>
+	    				<h1>회원가입</h1>
+						<div>
+							<div id="signup-id">아이디</div>
+							<input type="text" style="font-size:20px;">
+						</div>	
+						
+						<div>
+							<div id="signup-id">아이디</div>
+							<input type="text" style="font-size:20px;">
+						</div>		
+						
+						<div>
+							<div id="signup-pw">비밀번호</div>
+							<input type="password" style="font-size:20px;">
+						</div>	
+						
+						<div>
+							<div id="signup-pw2">비밀번호 확인</div>
+							<input type="password" style="font-size:20px;">
+						</div>		
+						
+						<div>
+							<div id="signup-number">전화번호</div>
+							<div>
+								<select>
+									<option>010</option>
+									<option>011</option>
+									<option>017</option>
+									<option>018</option>
+								</select>
+								<input type="number" style="font-size:20px; width:80px;">
+								&nbsp;&nbsp;-&nbsp;&nbsp;
+								<input type="number" style="font-size:20px; width:80px;">
+							</div
+						</div>
+						
+						<div>
+							<div id="signup-emil">이메일</div>
+							<input type="text" style="font-size:20px; width:170px;">@
+							<input type="text" style="font-size:20px; width:170px;">
+							<select>
+								<option>직접 입력</option>
+								<option>naver.com</option>
+								<option>hanmail.net</option>
+								<option>gmail.com</option>
+							</select>
+						</div>		
+						<div>
+							<div id="signup-address">주소</div>
+							<div>
+								<input type="text" id="sample6_postcode" placeholder="우편번호" style="height:50px; font-size:15px;">
+								<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+								<input type="text" id="sample6_address" placeholder="주소" style="height:50px; font-size:15px;"><br>
+								<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="height:50px; font-size:15px;">
+							</div>
+						</div>
+						
+						<div>
+							<input type="checkbox">이용약관과 개인정보 제공에 동의합니다.
+						</div>
+	    			</div>
+	    			
+	    			<div style="display: flex; justify-content: center;">
+	                	<button type="submit" class="default-button button-positive">회원가입</button>
+	                	<button onclick="location.href='/'" class="default-button button-negative">취소</button>
+                	</div>
+    			</div>
+    			
+   			</div>
+		</div>
+	
     </body>
 </html>

@@ -4,7 +4,7 @@
 <script src="./js/jquery-3.6.0.js"></script>
 
 <!-- STYLE -->
-<link rel="stylesheet" href="./css/style.css?ver=1.1"> 
+<link rel="stylesheet" href="./css/style.css"> 
 
 <!-- MAIN CONTENT -->
 <main>
@@ -29,60 +29,61 @@
     </div>
     <div id="brand-filter-container">
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">Dunk</div>
+            <div class="filter-item-cover" style="background-image:url('/img/dunk.png'); background-color:white;"></div>
+            <div class="filter-item-brand">Dunk</div>
         </div>
-        <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">오트리</div>
-        </div>
-
-        <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">에어포스</div>
+     	<div class="filter-item" >
+            <div class="filter-item-cover" style="background-image:url('/img/autry.png'); background-color:white;"></div>
+            <div class="filter-item-brand">오트리</div>
         </div>
 
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">발렌시아가</div>
+            <div class="filter-item-cover" style="background-image:url('/img/airpos.png'); background-color:white;"></div>
+            <div class="filter-item-brand">에어포스</div>
         </div>
 
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">Jordan 1</div>
+            <div class="filter-item-cover" style="background-image:url('/img/balenciaga.png'); background-color:white;"></div>
+            <div class="filter-item-brand">발렌시아가</div>
         </div>
 
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">Off-White</div>
+            <div class="filter-item-cover" style="background-image:url('/img/jordan-1.png'); background-color:white;"></div>
+            <div class="filter-item-brand">Jordan 1</div>
+        </div>
+
+        <div class="filter-item" >
+            <div class="filter-item-cover" style="background-image:url('/img/off-white.png'); background-color:white;"></div>
+            <div class="filter-item-brand">Off-White</div>
         </div>
         
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">마르지엘라</div>
+            <div class="filter-item-cover" style="background-image:url('/img/margiela.png'); background-color:white;"></div>
+            <div class="filter-item-brand">마르지엘라</div>
         </div>
         
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">뉴발란스</div>
+            <div class="filter-item-cover" style="background-image:url('/img/new-balance.png'); background-color:white;"></div>
+            <div class="filter-item-brand">뉴발란스</div>
         </div>
         
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">야스히로</div>
+            <div class="filter-item-cover"style="background-image:url('/img/yasuhiro.png'); background-color:white;"></div>
+            <div class="filter-item-brand">야스히로</div>
         </div>
         
         <div class="filter-item" >
-            <div class="fiter-item-cover"></div>
-            <div class="fiter-item-brand">YEEZY</div>
+            <div class="filter-item-cover" style="background-image:url('/img/yeezy.png'); background-color:white;"></div>
+            <div class="filter-item-brand">YEEZY</div>
         </div>
+         
     </div>
     <div id="search-filter">
        <div>필터</div>
        <div style="width: 100%; height: 50px;"></div>
     </div>
     <div id="search-result" style="width: 100%; ">
-        <div class="result-item" style="width: 272px; height: auto;">
+        <div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
             <div class="result-item-cover" style="width: 272px; height: 263px;"></div>
             <div class="result-item-info">
                 <div class="info-validation">

@@ -90,3 +90,52 @@ function findAddrssess()
         }
     }).open();
 }  	
+
+function sendMessage() {
+    
+    
+    if(document.getElementById('chat-input').value !== '')
+    {
+        // 현재 시간
+        const now = new Date();
+
+        // 입력한 메시지 내용
+        const msg = document.getElementById('chat-input').value;
+        const chat_view = document.getElementById('chat-view');
+
+        //내가 보낸 경우
+        chat_view.innerHTML += '<div class="msg-view-i"><div class="msg-date">'+getTime()+'</div><div class="msg-content"> <div class="msg-content-text" style="background-color: yellow">'+msg+'</div> </div></div>';
+
+        //하단으로 위치고정
+        chat_view.scrollTop = chat_view.scrollHeight;
+
+        // 입력창 clear
+        document.getElementById('chat-input').value = '';
+    }
+   
+}
+
+function receiveMessage()
+{
+    const msg = document.getElementById('chat-input').value;
+    const chat_view = document.getElementById('chat-view');
+
+    //상대 보낸 경우
+    chat_view.innerHTML += '<div class="msg-view"><img class="msg-pic"><div class="msg-content"><div class="msg-content-name">이름</div><div class="msg-content-text" style="background-color: white">'+msg+'</div></div><div class="msg-date">'+getTime()+'</div></div>'
+    
+    //하단으로 위치고정
+    chat_view.scrollTop = chat_view.scrollHeight;
+}
+
+function getTime(){
+    const now = new Date();
+    return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+}
+
+function removeChatItem(position)
+{
+	$('.mychat-info-item-' + position).remove();
+	$('#chat-view').empty();
+	$('#chat-input-container').empty();
+	
+}

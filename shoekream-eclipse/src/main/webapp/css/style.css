@@ -1,6 +1,6 @@
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
 * { 
@@ -294,6 +294,10 @@ input[type="number"]::-webkit-inner-spin-button {
 	background-color: #F5F5F5;
 }
 
+#mychat-wrap {
+	background-color: #F5F5F5;
+	border-left: solid black 1px;
+}
 #mychat-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -307,11 +311,84 @@ input[type="number"]::-webkit-inner-spin-button {
 .mychat-list-item {
 	display: flex;
 	padding: 10px;
+	border-bottom: solid black 1px;
 }
 
 .mychat-list-item:hover {
 	cursor: pointer;
 	background-color: #F5F5F5;
+}
+
+#chat-view {
+
+    height:500px;
+    margin: 8px; 
+    overflow: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+   
+}
+#chat-view::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+#chat-input {
+    width: 550px;
+    margin-right: 10px; 
+    padding: 0 10px; 
+    border-radius: 10px;
+    border: solid rgb(200, 200, 200) 1px
+}
+.msg-view {
+    display: flex; 
+    margin-bottom: 24px;
+}
+.msg-view-i {
+    display: flex; 
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+.msg-pic {
+    width: 50px;
+    height: 50px;
+
+    background-color: bisque;
+    border-radius: 100%;
+}
+.msg-content {
+    margin-left:8px;
+    margin-right: 8px;
+}
+
+.msg-content-notice {
+    margin: 0 auto; 
+    padding: 4px 16px; 
+    border: none; 
+    border-radius: 20px; 
+    background-color: white;
+    font-size: 16px;
+}
+
+.msg-content-name {
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.msg-content-text {
+    display: inline-block; 
+    max-width: 500px; 
+    word-break: break-all; 
+    border-radius: 8px;
+    min-width: 10px;
+    background-color: yellow;
+    padding: 8px;
+}
+.msg-date {
+    display:flex; 
+    align-items:flex-end;
+    font-size: 12px;
+    padding-bottom: 2px;
 }
 
 #editor { width : 100%; }

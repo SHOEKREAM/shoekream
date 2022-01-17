@@ -58,7 +58,7 @@
 									<td>제목</td>
 									<td><input type="text"></td>
 								</tr>
-								<tr><td colspan="2">문의내용</td</tr>
+								<tr><td colspan="2">문의내용</td></tr>
 								<tr>
 									<td colspan="2">
 									<!-- <textarea id="help-input-content"></textarea> -->

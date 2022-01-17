@@ -77,7 +77,7 @@ function findAddrssess()
 {
     new daum.Postcode(
 	{
-        oncomplete: function(data) 
+        oncomplete: (data)=>  
         {  			        	
             console.log(data);  			        	
             let roadAddr = data.roadAddress; // 도로명 주소 변수

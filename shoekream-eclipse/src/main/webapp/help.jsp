@@ -37,7 +37,7 @@
 		                    <div><a href="./notice.jsp"><h1>#공지사항</h1></a></div>
 		                    <div><a href="./faq.jsp"><h1>#자주묻는질문</h1></a></div>
 		                    <div><a href="./policy.jsp"><h1>#검수기준</h1></a></div>
-		                    <div><a href="./inquire.jsp"><h1>#문의하기</h1></a></div>
+		                    <div><a href="./help.jsp"><h1>#문의하기</h1></a></div>
 		                </div>
 		                <div id="support-container-content">
 		                    <div id="container-content-header"><h2>문의하기</h2></div>

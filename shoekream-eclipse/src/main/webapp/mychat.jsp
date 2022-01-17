@@ -30,12 +30,18 @@
 					<h1>나의 채팅</h1>
 					<div id="mychat-container">
 						<div id="mychat-list">
-							<div class="mylist-list-item" >
-								<div style="width: 60px; height: 60px; background-color: black; border-radius: 100%"></div>
-								<div style="margin-left: 10px; ">
-									<div>dddd</div>
-									<div>dsa</div>
+							<div class="mychat-list-item-container" >
+								<div class="mychat-list-item">
+									<div style="width: 60px; height: 60px; background-color: black; border-radius: 100%"></div>
+									<div id="mychat-info-container" style=" display: flex; align-items: center">
+										<div style="margin-left: 10px; ">
+											<div>dddd</div>
+											<div>dsa</div>
+										</div>
+									</div>
 								</div>
+								
+								
 								
 							</div>
 						</div>

@@ -191,24 +191,22 @@ input[type="number"]::-webkit-inner-spin-button {
 	width: 272px;
 	height: 263px;
 	border: none;
-	background-color: #F5F5F5;
+	/*background-color: #F5F5F5;*/
+	background-size: cover;
 }
 .result-item:hover {
 	cursor: pointer;
-	box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16);
+	/* box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16); */
 }
-
 .result-item-info { margin-top: 10px; }
 
 .info-validation { display: flex; }
 
 #support-container { display: flex; }
-
 #support-nav-container {
     width: 250px;
     margin-right: 100px;
 }
-
 #support-container-content { bwidth: 100%; }
 #support-nav-container div {
     margin-bottom: 20px;
@@ -229,21 +227,18 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 #notice-head-title { text-align: left; }
 #notice-head-date { width: 80px; }
-
 #notice-table, #faq-tatble, #help-table, #mypage-table, #wishlist-table {
     width: 100%;
     border-collapse: collapse;
 }
-
 #notice-table tbody{
     vertical-align: top;
 }
-
 #notice-head {
     /* border-bottom: solid black 1px; */
 }
-
 #notice-head, #notice-item { height: 30px; }
+
 #help-input-content {
 	width:100%; 
 	height:300px; 

@@ -107,7 +107,7 @@
 									<option>011</option>
 								</select>
 								<input type="number" style="font-size:20px; width:80px;">
-								&nbsp;&nbsp; - &nbsp;&nbsp;
+								-
 								<input type="number" style="font-size:20px; width:80px;">
 							</div>
 						</div>
@@ -136,14 +136,16 @@
 						<div>
 							<input type="checkbox">이용약관과 개인정보 제공에 동의합니다.
 						</div>
+						<div style="display: flex; justify-content: center;">
+		               		<button type="submit" class="default-button button-positive">회원가입</button>
+		               		<button onclick="location.href='/'" class="default-button button-negative">취소</button>
+             			</div>
+	    		
 	    			</div>
 	    			
-	    		
     			</div>
-   				<div style="display: flex; justify-content: center;">
-                	<button type="submit" class="default-button button-positive">회원가입</button>
-                	<button onclick="location.href='/'" class="default-button button-negative">취소</button>
-               	</div>
+   				
+	 				
    			</div>
 		</div>
 	

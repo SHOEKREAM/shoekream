@@ -93,19 +93,11 @@ input[type="number"]::-webkit-inner-spin-button {
 	 text-align:center; margin:0px auto;
 }
 
-#login-container {
+#login-container, #signup-container {
 	width: 50%;
-	
-}
-
-#login-wrap {
-	display: flex;
-	align-items: conter;
-}
-
-#signup-container {
-	width: 50%;
-	
+	display:flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #signup-wrap {

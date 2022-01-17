@@ -23,8 +23,7 @@
     		<div id="login-cover"></div>
     		<div id="login-container">
 		    		<div id="login-wrap">
-		    			<div>
-		    				<div id="login-title"><h1>로그인 하기</h1></div>
+	    				<div id="login-title"><h1>로그인 하기</h1></div>
 							<div id="login-text">아이디</div>
 							<div><input type="text" style="font-size:20px;"></div>
 							<div id="">비밀번호</div>

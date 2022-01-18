@@ -30,16 +30,13 @@ main { margin: 50px 0; }
 footer { margin-top: 100px; }
 
 button:hover { cursor: pointer; }
-input:focus { outline: none; }
 input
 {
 	border: none;
 	border-bottom: solid #B0B0B0 1px ;
 	/*width: 330px;*/
 }
-
-
-
+input:focus { outline: none; }
 input[type="number"] {
 	border: none;
 	border-bottom: solid black 1px;
@@ -271,23 +268,64 @@ input[type="number"]::-webkit-inner-spin-button {
 #mypage-head { width:100px; }
 
 
+#wishlist-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
 #wishlist-table { margin-top: 50px }
+#wishlist-head { border-bottom: solid black 1px;}
 #wishlist-head, #wishlist-item { height: 50px }
 #wishlist-head-n {
-	width:70px;
+  width:70px;
 }
 #wishlist-head-seller{
-	width:100px
+  width:100px
 }
 
 #wishlist-head-n, #wishlist-item-n,
 #wishlist-head-title, #wishlist-item-title {
-	text-align: left;
+  text-align: left;
 }
 
 #wishlist-head-seller, .wishlist-item-seller { text-align: center; }
+
+#wishlist-item {
+  margin-top: 10px;
+}
 #wishlist-item:hover {
-	background-color: #F5F5F5;
+  background-color: #F5F5F5;
+}
+
+.wishlist-item-size, .wishlist-item-price, 
+.wishlist-item-seller, .wishlist-item-button {
+  text-align: center;
+}
+
+#wishlist-head-n { width: 30px; }
+#wishlist-head-title { width: 600px; }
+#wishlist-head-size, #wishlist-head-price, 
+#ishlist-head-seller, #wishlist-head-buttton {
+  width: 80px;
+}
+
+
+.wishlist-item-info {
+  display: flex;
+}
+.wishlist-item-info-cover { 
+  width: 50px; 
+  height: 50px; 
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  /*background-color: orange; */
+}
+.wishlist-item-info-title{
+  display: flex; 
+  align-items: center;
 }
 
 #mychat-wrap {

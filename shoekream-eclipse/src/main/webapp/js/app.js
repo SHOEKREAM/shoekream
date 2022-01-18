@@ -139,3 +139,8 @@ function removeChatItem(position)
 	$('#chat-input-container').empty();
 	
 }
+
+ function removeWishlistItem(position) {
+	let item = $('#wishlist-table tbody tr').length;
+    $('#wishlist-item-'+ position).remove();
+  }

@@ -12,22 +12,7 @@
 		<!-- SCRIPTS -->
 		<script src="./js/app.js"></script>
 		<script src="./js/jquery-3.6.0.js"></script>
-		
-		<script>
-			function openCloseToc() 
-			{
-			    if(document.getElementById('toc-content').style.display === 'block') 
-			    {
-			      document.getElementById('toc-content').style.display = 'none';
-			      document.getElementById('toc-toggle').textContent = '검수안내▼';
-			    } else 
-			    {
-			      document.getElementById('toc-content').style.display = 'block';
-			      document.getElementById('toc-toggle').textContent = '검수안내▼';
-			    }
-			  }
-		</script>
-		
+				
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
 	
@@ -66,21 +51,16 @@
 								</tr>
 								
 								<tr>			
-									<td class="sales-list-item-n">2</td>
+									<td class="sales-list-item-n">1</td>
 									<td class="sales-list-item-title"><a href="#">나이키</a></td>
 									<td class="sales-list-item-size">230</td>
 									<td class="sales-list-item-price">12,000,000</td>
 									<td class="sales-list-item-seller">홍길동</td>
 									<td class="sales-list-item-buydate">2022-01-04</td>
 								</tr>
-							
-							
 							</tbody>
-							
 						</table>	
-					
 					</div>
-					
 				</div>
 				
 				<!-- Footer -->

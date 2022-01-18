@@ -13,62 +13,7 @@
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
-		<style>
-						a
-			{
-				text-decoration:none;
-				color:white;
-			}
-			.bigbox
-			{
-				display: flex;
-			}
-			.smallbox
-			{
-				margin-left: 20px;
-				margin-right: 20px;
-			}
-			div
-			{
-				display: inline-block;
-			}
-			td
-			{
-				height: 50px;
-			}
-			.btnAll
-			{
-				display: flex;
-				flex-direction: column-reverse;
-				flex-wrap: wrap-reverse;
-			}
-			.btn
-			{
-				width: 100px;
-				height: 20px;
-				margin: 20px;
-				vertical-align:top;
-				text-align: center;
-				padding: 25px 00px;
-				border-radius: 15px;
-			}
-			.a
-			{
-				background-color: #E95E5E;
-			}
-			.b
-			{
-				background-color: #5ED1E9;
-			}
-			.c
-			{
-				background-color: #5E71E9;
-			}
-			.d
-			{
-				background-color: #5ED1E9;
-			}
-		</style>
+		
 		
 		<!--INFORMATION -->
 		<title>SHOEKREAM - 한정판 중고 거래</title>
@@ -81,45 +26,63 @@
 				
 				<!-- Main -->
 				<div>
-					<div style="text-align: center;">
-					<h1 style="text-align: center;">검수 관리</h1>
-					<div>
+					<h1>검수 관리</h1>
+					<div style="margin-top: 10px">
 						<a style="color:black;"><b>과거 검수 이력</b></a>
-						<a href="./current_item_check.jsp" style="margin-left:20px; color:black;">현재 접수된 목록</a>
+						<a href="./current_item_check" style="margin-left:20px; color:black;">현재 접수된 목록</a>
 					</div>
-					<br><br><br>
-					<div style="width:1000px; height:350px;" class="bigbox">
-						<div class="smallbox" style="float:left;"><img src="image/shoes.jpg" style="width:300px; height:300px;"></div>
-						<div class="smallbox" style="float:center; width:300px;">
-							<table style="text-align: left;">
-								<tr>
-									<td style="width:100px;">상품명</td>
-									<td>Jordan Air 123456</td>
-								</tr>
-								<tr>
-									<td>브랜드명</td>
-									<td>Jordan</td>
-								</tr>
-								<tr>
-									<td>가격</td>
-									<td>123,456,789 원</td>
-								</tr>
-								<tr>
-									<td>검수 요청일</td>
-									<td>2022-01-01</td>
-								</tr>
-								<tr>
-									<td>검수 완료일</td>
-									<td>2020-01-02</td>
-								</tr>
-								<tr>
-									<td>판매자</td>
-									<td>박주연</td>
-								</tr>
-							</table>
+
+					<div id="check-container">
+						<div id="check-item-wrap">							
+							<div class="check-item">
+								<div class="check-item-cover"></div>
+								<div class="check-item-info" style="width:100%; display: flex; align-items: center">
+									<table id="check-table">
+										<tr>
+											<th class="check-item-head">브랜드명</th>
+											<td class="check-item-item-brand check-item-item">Jordan</td>
+										</tr>
+										
+										<tr>
+											<th class="check-item-head">상품명</th>
+											<td class="check-item-item-title check-item-item">Jordan Air 123456</td>
+										</tr>
+										
+										<tr>
+											<th class="check-item-head">가격</th>
+											<td class="check-item-item-price check-item-item">123,456,789 원</td>
+										</tr>
+										<tr>
+											<th class="check-item-head">검수 요청일</th>
+											<td class="check-item-item-request-checkdate check-item-item">2022-01-01</td>
+										</tr>
+										
+										<tr>
+											<th class="check-item-head">검수 완료일</th>
+											<td class="check-item-item-finish-date check-item-item">2020-01-02</td>
+										</tr>
+										
+										<tr>
+											<th class="check-item-head">현재 상태</th>
+											<td class="check-item-item-current-status check-item-item">검수 완료</td>
+										</tr>
+										
+										<tr>
+											<th class="check-item-head">판매자</th>
+											<td class="check-item-item-seller check-item-item">박주연</td>
+										</tr>
+									</table>				
+								</div>
+								
+								<div style="display:flex; align-items: center ">
+									<div class="item-check-button-container">
+										<button class="default-button button-negative" style="display:block"><a href="#">검수 이의제기</a></button>
+										<button class="default-button button-positive" style="display:block"><a href="#">상품 정보</a></button>
+									</div> 
+								</div>
+							</div>		
 						</div>
 					</div>
-				</div>
 				</div>
 				
 				<!-- Footer -->

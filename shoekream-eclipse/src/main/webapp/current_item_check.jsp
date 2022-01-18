@@ -109,7 +109,7 @@
 									</table>				
 								</div>
 								
-								<div style="display:flexl justify-content: end">
+								<div style="display:flex; align-items: center">
 									<div class="item-check-button-container">
 										<button class="default-button button-negative" style="display:block"><a href="#">검수 부적합</a></button>
 										<button class="default-button button-positive" style="display:block"><a href="#">검수 적합</a></button>

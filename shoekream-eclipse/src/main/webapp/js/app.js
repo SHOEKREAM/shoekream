@@ -140,7 +140,17 @@ function removeChatItem(position)
 	
 }
 
- function removeWishlistItem(position) {
+function removeWishlistItem(position) {
 	let item = $('#wishlist-table tbody tr').length;
     $('#wishlist-item-'+ position).remove();
-  }
+}
+
+function showFindAccountId(){
+	$('#find-wrap-id').show();
+	$('#find-wrap-pw').hide();
+}
+
+function showFindAccountPw(){
+	$('#find-wrap-pw').show();
+	$('#find-wrap-id').hide();
+}

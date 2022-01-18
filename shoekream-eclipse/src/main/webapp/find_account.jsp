@@ -10,80 +10,46 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
+		<script src="./js/app.js"></script>
+		<script src="./js/jquery-3.6.0.js"></script>
+		<script>
+			window.onload = () => {
+				showFindAccountId();
+			}
+		</script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
-		<style>
-			<style>
-			input[type=text]
-			{
-				border: 0px;
-				border-bottom: #B0B0B0 1px solid;
-				width: 330px;
-			}
-			input:focus
-			{
-				outline: none;
-			}
-			td
-			{
-				height: 70px;
-			}
-			div
-			{
-				border: #999999 1px solid;
-				width:150px;
-				height:50px;
-				text-align:center;
-				padding-top: 25px;
-			}
-			.btn
-			{
-				color:white;
-				width:330px;
-				height:60px;
-				background-color:#FF9595;
-				text-align:center;
-				display:table-cell;
-				vertical-align:middle;
-			}
-		</style>	
-		</style>
-		
+
 		<!--INFORMATION -->
 		<title>SHOEKREAM - 한정판 중고 거래</title>
 	</head>
     
     <body>
-    	<table border="0" width="340px" align="center">
-			<tr>
-				<td>
-					<div style="float:left;">아이디 찾기</div>
-					<div style="float:right; border:#A1D7FF 1px solid;">비밀번호 찾기</div>
-				</td>
-			</tr>
-			<tr>
-				<td>아이디</td>
-			</tr>
-			<tr>
-				<td><input type="text" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td>이메일 주소</td>
-			</tr>
-			<tr>
-				<td><input type="text" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td style="text-align:center; font-size:20px;" colspan="2">
-					<a href="#" style="color:black; text-decoration:none">
-						<span class="btn" style="background-color: #FF9595; width:150px;">계정 찾기</span>
-					</a>
-					<a href="#" style="color:black; text-decoration:none">
-						<span class="btn" style="background-color: #0078D7; width:100px;">취소</span>
-					</a>
-				</td>
-			</tr>
-		</table>
+	    <div id="app" style="display:flex;">
+    		<div id="find-account-cover"></div>
+	   		<div id="find-account-container">
+	    		<div id="find-wrap">
+	    			<h1>계정 찾기</h1>
+	    			<div id=find-wrap-button-container>
+	    				<button onclick="showFindAccountId()">아이디 찾기</button>
+	    				<button onclick="showFindAccountPw()">비밀번호 찾기</button>
+	    			</div>
+	    			
+	    			<div id="find-wrap-view-container">
+	    				<div id="find-wrap-id">
+		    				이메일
+		    				<input type="email">
+		    			</div>
+		    			
+		    			<div id="find-wrap-pw">
+		    				이메일<input type="email"> <br>
+		    				아이디 <input type="text"> <br>
+		    			</div>
+	    			</div>
+	    		</div>
+    		</div>
+   		</div>
+    	
     </body>
 </html>

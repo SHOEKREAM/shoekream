@@ -103,12 +103,12 @@
   </servlet-mapping>
   <servlet>
      <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
-    <servlet-name>/</servlet-name>
+    <servlet-name>index</servlet-name>
     <jsp-file>/index.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
     <servlet-name>index</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern></url-pattern>
   </servlet-mapping>
   <servlet>
      <display-name>SHOEKREAM - 한정판 중고 거래</display-name>

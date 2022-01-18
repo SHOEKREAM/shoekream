@@ -18,6 +18,6 @@
            <span class="material-icons" style="display:inline; position: absolute; right: 0; top: 0;  font-size: 14px; color: red; background-color: white; border-radius: 100%; border: solid white 1px">circle</span>
            <a href="./mychat.jsp" style="display:inline">나의 채팅</a>
         </div>
-        <a href="./logut.jsp">로그아웃</a>
+        <a href="./logout.jsp">로그아웃</a>
     </div>
 </header>

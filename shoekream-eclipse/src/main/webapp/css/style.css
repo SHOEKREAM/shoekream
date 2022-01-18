@@ -204,7 +204,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 250px;
     margin-right: 100px;
 }
-#support-container-content { bwidth: 100%; }
+#support-container-content { width: 100%; }
 #support-nav-container div {
     margin-bottom: 20px;
 }

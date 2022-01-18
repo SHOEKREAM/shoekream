@@ -19,7 +19,7 @@
   </error-page>
   <servlet>
     <description></description>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>login</servlet-name>
     <jsp-file>/login.jsp</jsp-file>
   </servlet>
@@ -34,11 +34,11 @@
     <jsp-file>/signup.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
- 	<servlet-name>signup</servlet-name>
+    <servlet-name>signup</servlet-name>
     <url-pattern>/signup</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>register</servlet-name>
     <jsp-file>/register.jsp</jsp-file>
   </servlet>
@@ -48,7 +48,7 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>wishlist</servlet-name>
     <jsp-file>/wishlist.jsp</jsp-file>
   </servlet>
@@ -57,7 +57,7 @@
     <url-pattern>/wishlist</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>mychat</servlet-name>
     <jsp-file>/mychat.jsp</jsp-file>
   </servlet>
@@ -93,7 +93,7 @@
     <url-pattern>/find_account</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>help</servlet-name>
     <jsp-file>/help.jsp</jsp-file>
   </servlet>
@@ -102,7 +102,7 @@
     <url-pattern>/help</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>index</servlet-name>
     <jsp-file>/index.jsp</jsp-file>
   </servlet>
@@ -111,7 +111,7 @@
     <url-pattern></url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>item</servlet-name>
     <jsp-file>/item.jsp</jsp-file>
   </servlet>
@@ -147,7 +147,7 @@
     <url-pattern>/notice</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>policy</servlet-name>
     <jsp-file>/policy.jsp</jsp-file>
   </servlet>
@@ -165,7 +165,7 @@
     <url-pattern>/purchase_list</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <servlet-name>reset</servlet-name>
     <jsp-file>/reset.jsp</jsp-file>
   </servlet>
@@ -183,7 +183,7 @@
     <url-pattern>/sales_list</url-pattern>
   </servlet-mapping>
   <servlet>
-     <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
+    <display-name>SHOEKREAM - 한정판 중고 거래</display-name>
     <display-name>support</display-name>
     <servlet-name>support</servlet-name>
     <jsp-file>/support.jsp</jsp-file>
@@ -191,5 +191,25 @@
   <servlet-mapping>
     <servlet-name>support</servlet-name>
     <url-pattern>/support</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>history_item_check</display-name>
+    <servlet-name>history_item_check</servlet-name>
+    <jsp-file>/history_item_check.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>history_item_check</servlet-name>
+    <url-pattern>/history_item_check</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>current_item_check</display-name>
+    <servlet-name>current_item_check</servlet-name>
+    <jsp-file>/current_item_check.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>current_item_check</servlet-name>
+    <url-pattern>/current_item_check</url-pattern>
   </servlet-mapping>
 </web-app>

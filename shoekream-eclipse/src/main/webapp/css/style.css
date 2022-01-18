@@ -266,27 +266,22 @@ input[type="number"]::-webkit-inner-spin-button {
 #mypage-head { width:100px; }
 
 
-#wishlist-table, #sales-list-table, #check-table {
+#wishlist-table, #sales-list-table, #purchase-list-table, #check-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 10px;
 }
 
-#wishlist-table, #sales-list-table, #check-container { margin-top: 50px }
+#wishlist-table, #sales-list-table, #purchase-list-table, #check-container { margin-top: 50px }
 #wishlist-head { border-bottom: solid black 1px;}
 
 #wishlist-head-n, #wishlist-item-n,
 #wishlist-head-title, #wishlist-item-title,
 #sales-list-head-n, #sales-list-item-n,
-#sales-list-head-title, #sales-list-item-title {
+#sales-list-head-title, #sales-list-item-title,
+#purchase-list-head-n, #purchase-item-n,
+#purchase-list-head-title, #purchaset-item-title {
   text-align: left;
-}
-
-#sales-list-head-size, #sales-list-head-price, 
-#sales-list-head-seller, #sales-list-head-buydate,
-.sales-list-item-size, .sales-list-item-price, 
-.sales-list-item-seller, .sales-list-item-buydate{
-	text-align: center;
 }
 
 #wishlist-head-seller, .wishlist-item-seller { text-align: center; }
@@ -294,17 +289,27 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #F5F5F5;
 }
 
+
+#sales-list-head-size, #sales-list-head-price, 
+#sales-list-head-seller, #sales-list-head-buydate,
+.sales-list-item-size, .sales-list-item-price, 
+.sales-list-item-seller, .sales-list-item-buydate
 .wishlist-item-size, .wishlist-item-price, 
-.wishlist-item-seller, .wishlist-item-button {
+.wishlist-item-seller, .wishlist-item-button,
+.purchase-list-item-size, .purchase-list-item-price,
+.purchase-list-item-buydate, .purchase-list-item-seller, 
+.purchase-list-item-button {
   text-align: center;
 }
 
-#wishlist-head-n, #sales-list-head-n { width: 30px; }
-#wishlist-head-title, #sales-list-head-title { width: 600px; }
+#wishlist-head-n, #sales-list-head-n, #purchase-list-head-n { width: 30px; }
+#wishlist-head-title, #sales-list-head-title, #purchase-list-head-title { width: 600px; }
 #wishlist-head-size, #wishlist-head-price, 
 #wishlist-head-seller, #wishlist-head-buttton,  
 #sales-list-head-size, #sales-list-head-price, 
-#sales-list-head-seller, #sales-list-head-buydate{
+#sales-list-head-seller, #sales-list-head-buydate,
+#purchase-list-head-size, #purchase-list-head-price, 
+#purchase-list-head-seller, #purchase-list-head-buydate {
   width: 80px;
 }
 

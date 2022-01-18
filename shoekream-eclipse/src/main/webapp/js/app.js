@@ -154,3 +154,16 @@ function showFindAccountPw(){
 	$('#find-wrap-pw').show();
 	$('#find-wrap-id').hide();
 }
+
+function openPolicy() {
+	$('#shoekream-policy').toggle();
+}
+ 
+function callDibs() {
+	
+}
+
+function buyItem()
+{
+	
+}

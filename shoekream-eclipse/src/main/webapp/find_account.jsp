@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="kr">
     <head>
@@ -22,7 +22,7 @@
 		<link rel="stylesheet" href="./css/style.css">
 
 		<!--INFORMATION -->
-		<title>SHOEKREAM - ������ �߰� �ŷ�</title>
+		<title>SHOEKREAM - 한정판 중고 거래</title>
 	</head>
     
     <body>
@@ -30,21 +30,21 @@
     		<div id="find-account-cover"></div>
 	   		<div id="find-account-container">
 	    		<div id="find-wrap">
-	    			<h1>���� ã��</h1>
+	    			<h1>계정 찾기</h1>
 	    			<div id=find-wrap-button-container>
-	    				<button onclick="showFindAccountId()">���̵� ã��</button>
-	    				<button onclick="showFindAccountPw()">��й�ȣ ã��</button>
+	    				<button onclick="showFindAccountId()">아이디 찾기</button>
+	    				<button onclick="showFindAccountPw()">비밀번호 찾기</button>
 	    			</div>
 	    			
 	    			<div id="find-wrap-view-container">
 	    				<div id="find-wrap-id">
-		    				�̸���
+		    				이메일
 		    				<input type="email">
 		    			</div>
 		    			
 		    			<div id="find-wrap-pw">
-		    				�̸���<input type="email"> <br>
-		    				���̵� <input type="text"> <br>
+		    				이메일<input type="email"> <br>
+		    				아이디 <input type="text"> <br>
 		    			</div>
 	    			</div>
 	    		</div>

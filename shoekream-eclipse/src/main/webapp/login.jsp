@@ -30,7 +30,8 @@
 							<div><input type="password" style="font-size:20px;"></div>
 							<div><input type="checkbox" style=" margin-right: 4px">아이디 저장</div>
 							<div class="default-button button-positive">로그인</div>
-							<div><a href="./signup.jsp"><b>회원가입</b></a> 또는 <a href="./reset.jsp"><b>아이디</b> 또는 <b>비밀번호</b>가 생각나지 않아요</a></div>
+							<div><a href="./signup"><b>회원가입</b></a> 또는 <a href="./find_account"><b>아이디</b></a> 
+							또는 <a href="./find_account"><b>비밀번호</b></a>가 생각나지 않아요</div>
 		    			</div>
 		    		</div>
 		    	</div>

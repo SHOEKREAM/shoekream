@@ -223,7 +223,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 #notice-head-title { text-align: left; }
 #notice-head-date { width: 80px; }
-#notice-table, #faq-tatble, #help-table, #mypage-table, #wishlist-table {
+#notice-table, #faq-tatble, 
+#help-table, #mypage-table, 
+#wishlist-table, #sales-list-table, #mypage-table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -259,40 +261,34 @@ input[type="number"]::-webkit-inner-spin-button {
 .button-positive { background-color: #5ED1E9; }
 .button-negative { background-color: #E95E5E; }
 
-#mypage-table {
-	width: 100%;
-	border-collapse: collapse;
-}
 #mypage-table tr { height: 80px; }
 #mypage-head { width:100px; }
 
 
-#wishlist-table {
+#wishlist-table, #sales-list-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 10px;
 }
 
-#wishlist-table { margin-top: 50px }
+#wishlist-table, #sales-list-table { margin-top: 50px }
 #wishlist-head { border-bottom: solid black 1px;}
-#wishlist-head, #wishlist-item { height: 50px }
-#wishlist-head-n {
-  width:70px;
-}
-#wishlist-head-seller{
-  width:100px
-}
 
 #wishlist-head-n, #wishlist-item-n,
-#wishlist-head-title, #wishlist-item-title {
+#wishlist-head-title, #wishlist-item-title,
+#sales-list-head-n, #sales-list-item-n,
+#sales-list-head-title, #sales-list-item-title {
   text-align: left;
 }
 
-#wishlist-head-seller, .wishlist-item-seller { text-align: center; }
-
-#wishlist-item {
-  margin-top: 10px;
+#sales-list-head-size, #sales-list-head-price, 
+#sales-list-head-seller, #sales-list-head-buydate,
+.sales-list-item-size, .sales-list-item-price, 
+.sales-list-item-seller, .sales-list-item-buydate{
+	text-align: center;
 }
+
+#wishlist-head-seller, .wishlist-item-seller { text-align: center; }
 #wishlist-item:hover {
   background-color: #F5F5F5;
 }
@@ -302,10 +298,12 @@ input[type="number"]::-webkit-inner-spin-button {
   text-align: center;
 }
 
-#wishlist-head-n { width: 30px; }
-#wishlist-head-title { width: 600px; }
+#wishlist-head-n, #sales-list-head-n { width: 30px; }
+#wishlist-head-title, #sales-list-head-title { width: 600px; }
 #wishlist-head-size, #wishlist-head-price, 
-#ishlist-head-seller, #wishlist-head-buttton {
+#wishlist-head-seller, #wishlist-head-buttton,  
+#sales-list-head-size, #sales-list-head-price, 
+#sales-list-head-seller, #sales-list-head-buydate{
   width: 80px;
 }
 

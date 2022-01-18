@@ -96,7 +96,7 @@
        <div style="width: 100%; height: 50px;"></div>
     </div>
     <div id="search-result" style="width: 100%; ">
-        <div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+        <div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">
@@ -113,7 +113,7 @@
             </div>
 		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">
@@ -130,7 +130,7 @@
             </div>
 		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">
@@ -147,7 +147,7 @@
             </div>
 		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">
@@ -164,7 +164,7 @@
             </div>
 		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">
@@ -181,7 +181,7 @@
             </div>
 		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">
@@ -198,7 +198,7 @@
             </div>
 		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item.jsp'">
+		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
             <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
             <div class="result-item-info">
                 <div class="info-validation">

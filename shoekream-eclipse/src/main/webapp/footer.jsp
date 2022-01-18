@@ -14,10 +14,10 @@
 			</div>
 			
 			<div id="footer-nav" style="margin: 10px 0;">
-			    <a href="./notice.jsp">공지사항</a>
+			    <a href="./notice">공지사항</a>
 			    <a href="#">이용안내</a>
 			    <a href="#">개인정보</a>
-			    <a href="./policy.jsp">검수기준</a>
+			    <a href="./policy">검수기준</a>
 			    <a href="#">개인정보정책</a><br>
 			</div>
 		</div>

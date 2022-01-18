@@ -11,7 +11,7 @@
 
 		<!-- SCRIPTS -->
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-		<script src="./js/jquery-3.6.0js"></script>
+		<script src="./js/jquery-3.6.0.js"></script>
 		<script>
 		    //function sample6_execDaumPostcode() {
 		    function showDaumPostcode() 

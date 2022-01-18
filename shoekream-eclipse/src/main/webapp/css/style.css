@@ -225,7 +225,8 @@ input[type="number"]::-webkit-inner-spin-button {
 #notice-head-date { width: 80px; }
 #notice-table, #faq-tatble, 
 #help-table, #mypage-table, 
-#wishlist-table, #sales-list-table, #mypage-table {
+#wishlist-table, #sales-list-table, #mypage-table
+#check-table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -244,7 +245,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .default-button {
-	width:110px;
+	width:120px;
 	height:50px;
 	
 	display: table-cell; 
@@ -265,13 +266,13 @@ input[type="number"]::-webkit-inner-spin-button {
 #mypage-head { width:100px; }
 
 
-#wishlist-table, #sales-list-table {
+#wishlist-table, #sales-list-table, #check-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 10px;
 }
 
-#wishlist-table, #sales-list-table { margin-top: 50px }
+#wishlist-table, #sales-list-table, #check-container { margin-top: 50px }
 #wishlist-head { border-bottom: solid black 1px;}
 
 #wishlist-head-n, #wishlist-item-n,
@@ -424,12 +425,37 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #editor { width : 100%; }
 
+
+#check-table {
+	margin-left: 20px
+}
+.check-item {
+	display: flex;
+	margin-top: 20px;
+}
+.check-item-head {
+	width: 150px;
+	text-align: left;
+	
+}
+
+.check-item-head, .check-item-item {
+/* 	font-size: 20px */
+}
+
+.check-item-cover {
+	min-width:200px;
+	height:250px;
+	display: inline-block;
+	background-color: #F5F5F5;
+}
+
 #find-wrap-button-container {
 	display: flex;
 }
 
 #find-wrap-view-container {
-	margin-top: 10px
+	margin-top: 10px;
 }
 
 

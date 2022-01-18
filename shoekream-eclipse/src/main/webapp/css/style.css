@@ -484,6 +484,14 @@ input[type="number"]::-webkit-inner-spin-button {
 	cursor: pointer;
 }
 
+.register-input-container {
+	margin-top: 30px;
+}
+
+.register-input-container h2 {
+	margin-bottom: 10px
+}
+
 
 /* FOOTER */
 #footer-nav  {

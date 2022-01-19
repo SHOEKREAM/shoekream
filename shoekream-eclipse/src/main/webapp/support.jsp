@@ -44,10 +44,10 @@
 					<table border="0" style="width:300px; height:500px; float:left;">
 						<tr>
 							<td valign="top">
-								<div style="height:100px;"><a href="./notice.jsp">공지사항</a></div>
-								<div style="height:100px;"><a href="./faq.jsp">자주 묻는 질문</a></div>
-								<div style="height:100px;"><a href="./policy.jsp">검수 기준</a></div>
-								<div style="height:100px;"><a href="./help.jsp">문의하기</a></div>
+								<div style="height:100px;"><a href="./notice">공지사항</a></div>
+								<div style="height:100px;"><a href="./faq">자주 묻는 질문</a></div>
+								<div style="height:100px;"><a href="./policy">검수 기준</a></div>
+								<div style="height:100px;"><a href="./help">문의하기</a></div>
 							</td>
 						</tr>
 					</table>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="kr">
     <head>
@@ -10,80 +10,46 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
+		<script src="./js/app.js"></script>
+		<script src="./js/jquery-3.6.0.js"></script>
+		<script>
+			window.onload = () => {
+				showFindAccountId();
+			}
+		</script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
-		<style>
-			<style>
-			input[type=text]
-			{
-				border: 0px;
-				border-bottom: #B0B0B0 1px solid;
-				width: 330px;
-			}
-			input:focus
-			{
-				outline: none;
-			}
-			td
-			{
-				height: 70px;
-			}
-			div
-			{
-				border: #999999 1px solid;
-				width:150px;
-				height:50px;
-				text-align:center;
-				padding-top: 25px;
-			}
-			.btn
-			{
-				color:white;
-				width:330px;
-				height:60px;
-				background-color:#FF9595;
-				text-align:center;
-				display:table-cell;
-				vertical-align:middle;
-			}
-		</style>	
-		</style>
-		
+
 		<!--INFORMATION -->
-		<title>SHOEKREAM - ÇÑÁ¤ÆÇ Áß°í °Å·¡</title>
+		<title>SHOEKREAM - í•œì •íŒ ì¤‘ê³  ê±°ë˜</title>
 	</head>
     
     <body>
-    	<table border="0" width="340px" align="center">
-			<tr>
-				<td>
-					<div style="float:left;">¾ÆÀÌµğ Ã£±â</div>
-					<div style="float:right; border:#A1D7FF 1px solid;">ºñ¹Ğ¹øÈ£ Ã£±â</div>
-				</td>
-			</tr>
-			<tr>
-				<td>¾ÆÀÌµğ</td>
-			</tr>
-			<tr>
-				<td><input type="text" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td>ÀÌ¸ŞÀÏ ÁÖ¼Ò</td>
-			</tr>
-			<tr>
-				<td><input type="text" style="font-size:20px;"></td>
-			</tr>
-			<tr>
-				<td style="text-align:center; font-size:20px;" colspan="2">
-					<a href="#" style="color:black; text-decoration:none">
-						<span class="btn" style="background-color: #FF9595; width:150px;">°èÁ¤ Ã£±â</span>
-					</a>
-					<a href="#" style="color:black; text-decoration:none">
-						<span class="btn" style="background-color: #0078D7; width:100px;">Ãë¼Ò</span>
-					</a>
-				</td>
-			</tr>
-		</table>
+	    <div id="app" style="display:flex;">
+    		<div id="find-account-cover"></div>
+	   		<div id="find-account-container">
+	    		<div id="find-wrap">
+	    			<h1>ê³„ì • ì°¾ê¸°</h1>
+	    			<div id=find-wrap-button-container>
+	    				<button onclick="showFindAccountId()">ì•„ì´ë”” ì°¾ê¸°</button>
+	    				<button onclick="showFindAccountPw()">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</button>
+	    			</div>
+	    			
+	    			<div id="find-wrap-view-container">
+	    				<div id="find-wrap-id">
+		    				ì´ë©”ì¼
+		    				<input type="email">
+		    			</div>
+		    			
+		    			<div id="find-wrap-pw">
+		    				ì´ë©”ì¼<input type="email"> <br>
+		    				ì•„ì´ë”” <input type="text"> <br>
+		    			</div>
+	    			</div>
+	    		</div>
+    		</div>
+   		</div>
+    	
     </body>
 </html>

@@ -10,174 +10,12 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
-		<script>
-			function openCloseToc() 
-			{
-			    if(document.getElementById('toc-content').style.display === 'block') 
-			    {
-			      document.getElementById('toc-content').style.display = 'none';
-			      document.getElementById('toc-toggle').textContent = '검수안내▼';
-			    } else 
-			    {
-			      document.getElementById('toc-content').style.display = 'block';
-			      document.getElementById('toc-toggle').textContent = '검수안내▼';
-			    }
-			  }
-		</script>
-		
+		<script src="./js/app.js"></script>
+		<script src="./js/jquery-3.6.0.js"></script>
+				
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
-		<style>
-			#button
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #5ED1E9;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#button2
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #E95E5E;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#box
-			{
-				border-top-right-radius : 10px;
-				border-top-left-radius : 10px;
-				border-bottom-right-radius : 10px;
-				border-bottom-left-radius : 10px;
-				display:float;
-				background-color:#EFEFEF; 
-				width:280px; 
-				height:60px; 
-				padding-top:12px;
-			}
-			#tr
-			{
-				border-bottom:1px solid #ADADAD; 
-				padding-top:30px;
-			}
-			#mybutton
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #5ED1E9;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			.mybutton2
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #E95E5E;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#adbutton1
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #5ED1E9;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#adbutton2
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #E95E5E;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#mybox
-			{
-				border-top-right-radius : 10px;
-				border-top-left-radius : 10px;
-				border-bottom-right-radius : 10px;
-				border-bottom-left-radius : 10px;
-				display:float;
-				background-color:#EFEFEF; 
-				width:280px; 
-				height:60px; 
-				padding-top:12px;
-			}
-			#prbutton
-			{
-				height : 75px;
-				width : 250px;
-				background-color : #5ED1E9;
-				font-size : 15pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#prbutton2
-			{
-				height : 75px;
-				width : 250px;
-				background-color : #E95E5E;
-				font-size : 15pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#prbox
-			{
-				border-top-right-radius : 10px;
-				border-top-left-radius : 10px;
-				border-bottom-right-radius : 10px;
-				border-bottom-left-radius : 10px;
-				display:float;
-				background-color:#EFEFEF; 
-				width:280px; 
-				height:60px; 
-				padding-top:12px;
-			}
-			#prline
-			{
-				border : 1px;
-			}
-		</style>
+	
 		
 		<!--INFORMATION -->
 		<title>SHOEKREAM - 한정판 중고 거래</title>
@@ -190,50 +28,39 @@
 				
 				<!-- Main -->
 				<div>
-					<table border="1" align="center" width="900px">				
-						<tr align="center">
-							<td colspan="7" align="center">판매 내역</td>
-						</tr>						
-							<td>번호</td>
-							<td>상품명</td>
-							<td>사이즈</td>
-							<td>가격</td>
-							<td>구매자</td>
-							<td>구매일</td>
-						</tr>
-						<tr>			
-							<td>1</td>
-							<td><a href="#">나이키</a></td>
-							<td>230</td>
-							<td>12,000,000</td>
-							<td>홍길동</td>
-							<td>2022-01-04</td>
-						</tr>
-						<tr>			
-							<td>2</td>
-							<td><a href="#">나이키</a></td>
-							<td>230</td>
-							<td>12,000,000</td>
-							<td>홍길동</td>
-							<td>2022-01-04</td>
-						</tr>
-						<tr>			
-							<td>3</td>
-							<td><a href="#">나이키</a></td>
-							<td>230</td>
-							<td>12,000,000</td>
-							<td>홍길동</td>
-							<td>2022-01-04</td>
-						</tr>
-						<tr>			
-							<td>4</td>
-							<td><a href="#">나이키</a></td>
-							<td>230</td>
-							<td>12,000,000</td>
-							<td>홍길동</td>
-							<td>2022-01-04</td>
-						</tr>
-					</table>	
+					<h1>판매내역</h1>
+					<div id="sales-list-wrap">
+						<table id="sales-list-table">				
+							<thead>
+								<th id="sales-list-head-n">#</th>
+								<th id="sales-list-head-title">상품명</th>
+								<th id="sales-list-head-size">사이즈</th>
+								<th id="sales-list-head-price">가격</th>
+								<th id="sales-list-head-seller">구매자</th>
+								<th id="sales-list-head-buydate">구매일</th>
+							</thead>
+							
+							<tbody>
+								<tr>			
+									<td class="sales-list-item-n">1</td>
+									<td class="sales-list-item-title"><a href="#">나이키</a></td>
+									<td class="sales-list-item-size">230</td>
+									<td class="sales-list-item-price">12,000,000</td>
+									<td class="sales-list-item-seller">홍길동</td>
+									<td class="sales-list-item-buydate">2022-01-04</td>
+								</tr>
+								
+								<tr>			
+									<td class="sales-list-item-n">1</td>
+									<td class="sales-list-item-title"><a href="#">나이키</a></td>
+									<td class="sales-list-item-size">230</td>
+									<td class="sales-list-item-price">12,000,000</td>
+									<td class="sales-list-item-seller">홍길동</td>
+									<td class="sales-list-item-buydate">2022-01-04</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
 				</div>
 				
 				<!-- Footer -->

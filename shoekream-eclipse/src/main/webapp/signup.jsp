@@ -1,5 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%
+    if(session.getAttribute("user") != null) 
+    {
+    %>
+    <script>
+        location.href='/'
+    </script>
+    <%
+    }
+%>
+
 <!DOCTYPE html>
 <html lang="kr">
     <head>
@@ -47,18 +58,89 @@
 		                    if(extraAddr !== '') extraAddr = ' (' + extraAddr + ')';
 		                 
 		                    // 조합된 참고항목을 해당 필드에 넣는다.
-		                    document.getElementById("sample6_extraAddress").value = extraAddr;
-		                
-		                } else  document.getElementById("sample6_extraAddress").value = '';
+		                    document.getElementById("signup-address").value = extraAddr;
+		                } else  document.getElementById("signup-address").value = '';
 		                		
 		                // 우편번호와 주소 정보를 해당 필드에 넣는다.
-		                document.getElementById('sample6_postcode').value = data.zonecode;
-		                document.getElementById("sample6_address").value = addr;
+		                document.getElementById('signup-address-postnumber').value = data.zonecode;
+		                document.getElementById("signup-address").value = addr;
 		                // 커서를 상세주소 필드로 이동한다.
-		                document.getElementById("sample6_detailAddress").focus();
+		                document.getElementById("signup-address-detail").focus();
 		            }
 		        }).open();
 		    }
+		</script>
+		
+		<script>
+			function signup() 
+			{
+				let name = $('#signup-name').val();
+	
+				let id = $('#signup-id').val();
+				let pw = $('#signup-pw').val();
+				let pw2 = $('#signup-pw2').val();
+				let ph_1 = $('#signup-number-first').find(":selected").text();
+				let ph_2 = $('#signup-number-second').val();
+				let ph_3 = $('#signup-number-third').val();
+				let ph = ph_1 + ph_2 + ph_3;
+				
+				
+				let email_id = $('#signup-email-id').val() + '@' + $('#signup-email-provider').val();
+				let email_email_provider =  $('#signup-email-provider').val();
+				let address_post_number = '('+$('#signup-address-postnumber').val() + ')';
+				let address = $('#signup-address').val();
+				let address_detail = $('#signup-address-detail').val();
+				let isAgree = $('#isAgree').is(":checked");
+				
+				if(name === '' ) alert('이름을 입력해 주세요');
+				else if (id === '') alert('아이디를 입력해 주세요');
+				else if (pw === '' || pw2 === '' ) alert('비밀번호를 입력해 주세요');
+				else if (pw !== pw2) alert('비밀번호가 맞지 않습니다.');
+				else if (ph_2 === '' || ph_3 === '') alert('전화번호를 입력해 주세요');
+				else if (email_id === '' || email_email_provider === '') alert('이메일을 입력해 주세요');
+				else if (!validateEmail(email_id)) alert('올바른 이메일 주소가 아닙니다');
+				else if (address_post_number === '' || address === '' || address_detail === '') alert('주소를 입력해 주세요');
+				else if (isAgree === 'false') alert('이용약관에 동의해주세요');
+				else {
+					$.ajax({
+						
+						url: 'signup.do',
+				        method: 'POST',
+				        data: {
+				        	'name' : name,
+				       	    'id' : id,
+				        	'pw' : pw,
+				        	'ph' : ph_1 + ph_2 + ph+3,
+				        	'email' : email_id,
+				        	'address' : address_post_number + address + address_detail
+				           
+				        },
+				        success : (response) => {
+				        	
+				        	location.href = '/';
+						
+				        }	      
+					})
+				}
+			
+				
+				
+				
+			}
+			
+			function insertEmailProvider() 
+			{
+				$('#signup-email-provider').val($('#signup-email-provider-select').find(":selected").text());
+			}
+			
+			 function validateEmail(email)
+	        {
+	            const regx = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+	            
+	            if(regx.test(email)) return true;
+	            else return false;
+	        }
+		
 		</script>
 		
 		<!-- STYLE -->
@@ -76,25 +158,25 @@
 	    			<div>
 	    				<h1>회원가입</h1>
 						<div>
-							<div id="signup-id">아이디</div>
-							<input type="text" style="font-size:20px;">
+							<div>이름</div>
+							<input id="signup-name"  type="text" style="font-size:20px;">
 						</div>	
 						
 						<div>
-							<div id="signup-id">아이디</div>
-							<input type="text" style="font-size:20px;">
+							<div>아이디</div>
+							<input id="signup-id" type="text" style="font-size:20px;">
 						</div>		
 						
 						
 						<div id="pw-container">
 							<div>
-								<div id="signup-pw">비밀번호</div>
-								<input type="password" style="font-size:20px;">
+								<div >비밀번호</div>
+								<input id="signup-pw" type="password" style="font-size:20px;">
 							</div>	
 							
 							<div>
-								<div id="signup-pw2">비밀번호 확인</div>
-								<input type="password" style="font-size:20px;">
+								<div >비밀번호 확인</div>
+								<input id="signup-pw2" type="password" style="font-size:20px;">
 							</div>		
 						</div>
 						
@@ -102,21 +184,21 @@
 						<div>
 							<div id="signup-number">전화번호</div>
 							<div>
-								<select>
+								<select id="signup-number-first">
 									<option>010</option>
 									<option>011</option>
 								</select>
-								<input type="number" style="font-size:20px; width:80px;">
+								<input id="signup-number-secode" type="number" style="font-size:20px; width:80px;">
 								-
-								<input type="number" style="font-size:20px; width:80px;">
+								<input id="signup-number-third" type="number" style="font-size:20px; width:80px;">
 							</div>
 						</div>
 						
 						<div>
-							<div id="signup-emil">이메일</div>
-							<input type="text" style="font-size:20px; width:170px;">@
-							<input type="text" style="font-size:20px; width:170px;">
-							<select>
+							<div >이메일</div>
+							<input id="signup-email-id" type="text" style="font-size:20px; width:170px;">@
+							<input id="signup-email-provider" type="text" style="font-size:20px; width:170px;">
+							<select onchange="insertEmailProvider()" id="signup-email-provider-select">
 								<option>직접 입력</option>
 								<option>naver.com</option>
 								<option>hanmail.net</option>
@@ -124,20 +206,20 @@
 							</select>
 						</div>		
 						<div>
-							<div id="signup-address">주소</div>
+							<div>주소</div>
 							<div>
-								<input type="text" id="sample6_postcode" placeholder="우편번호" style="height:50px; ">
+								<input id="signup-address-postnumber" type="text" id="sample6_postcode" placeholder="우편번호" style="height:50px; ">
 								<input type="button" onclick="showDaumPostcode()" value="우편번호 찾기"><br>
-								<input type="text" id="sample6_address" placeholder="주소" style="height:50px; "><br>
-								<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="height:50px; ">
+								<input id="signup-address" type="text" id="sample6_address" placeholder="주소" style="height:50px; "><br>
+								<input id="signup-address-detail" type="text" id="sample6_detailAddress" placeholder="상세주소" style="height:50px; ">
 							</div>
 						</div>
 						
 						<div>
-							<input type="checkbox">이용약관과 개인정보 제공에 동의합니다.
+							<input id="isAgree" type="checkbox">이용약관과 개인정보 제공에 동의합니다.
 						</div>
 						<div style="display: flex; justify-content: center;">
-		               		<button type="submit" class="default-button button-positive">회원가입</button>
+		               		<button class="default-button button-positive" onclick="signup()">회원가입</button>
 		               		<button onclick="location.href='/'" class="default-button button-negative">취소</button>
              			</div>
 	    		

@@ -168,3 +168,9 @@ function buyItem()
 {
 	
 }
+
+function convertToMonetaryUnit(money)
+{
+	return money;
+}
+

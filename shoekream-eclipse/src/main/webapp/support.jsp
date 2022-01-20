@@ -10,7 +10,6 @@
 		<meta http-equiv="Cache-Control" content="no-cache">
 
 		<!-- SCRIPTS -->
-		<script src="./js/jquery-3.6.0js"></script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
@@ -41,17 +40,17 @@
 				
 				<!-- Main -->
 				<div>
-					<table border="0" style="width:300px; height:500px; float:left;">
-						<tr>
-							<td valign="top">
-								<div style="height:100px;"><a href="./notice">공지사항</a></div>
-								<div style="height:100px;"><a href="./faq">자주 묻는 질문</a></div>
-								<div style="height:100px;"><a href="./policy">검수 기준</a></div>
-								<div style="height:100px;"><a href="./help">문의하기</a></div>
-							</td>
-						</tr>
-					</table>
-				
+					<div id="support-container">
+		                <div id="support-nav-container" >
+		                    <div><a href="./notice"><h1>#공지사항</h1></a></div>
+		                    <div><a href="./faq"><h1>#자주묻는질문</h1></a></div>
+		                    <div><a href="./policy"><h1>#검수기준</h1></a></div>
+		                    <div><a href="./help"><h1>#문의목록</h1></a></div>
+		                </div>
+		                <div id="support-container-content">
+		                  
+		                </div>
+		            </div>
 				</div>
 				
 				<!-- Footer -->

@@ -16,8 +16,39 @@
 		<script>
 			window.onload = function()
 			{
-				$(".faq-wrap").hide();
+				
+				$.ajax({
+					url: 'faq.do',
+					method: 'GET',
+					success: (response) => {
+						let data = response.data;
+						
+						let count = 1;
+						
+						let tmp = $('#faq-container');
+						for(item in data)
+						{
+							
+							tmp.append('<div class="faq-item">'
+			                     +'<div id="faq-item-info">'
+			                     +	'<div id="question" onclick="unfoldFAQ('+count+')"> <h4> Q. '+data[item].question+'</h4></div>'
+			                     +  '<div id="answer-'+count+'" class="faq-wrap" style="margin-top: 10px; margin-bottom: 10px">A. '+data[item].answer+'</div>'
+			                     + '</div></div>'
+							);
+							
+							count++;
+							
+						}
+						
+						$(".faq-wrap").hide();
+					}
+				});
+				
+			
+				
 			}
+			
+			
 		</script>
 		
 		
@@ -42,7 +73,7 @@
 		                    <div><a href="./notice"><h1>#공지사항</h1></a></div>
 		                    <div><a href="./faq"><h1>#자주묻는질문</h1></a></div>
 		                    <div><a href="./policy"><h1>#검수기준</h1></a></div>
-		                    <div><a href="./inquire"><h1>#문의하기</h1></a></div>
+		                    <div><a href="./help"><h1>#문의하기</h1></a></div>
 		                </div>
 		                
 		                 <div id="support-container-content">
@@ -50,12 +81,7 @@
 		                    
 		                    <div id="content-container">
 		                        <div id="faq-container">
-		                            <div class="faq-item">
-		                                <div id="faq-item-info">
-		                                    <div id="question" onclick="unfoldFAQ(1)">Q. aaa</div>
-		                                    <div id="answer-1" class="faq-wrap">A. bbb</div>
-		                                </div>
-		                            </div>
+		                            
 		                        </div>
 		                    </div>
 	                    </div>

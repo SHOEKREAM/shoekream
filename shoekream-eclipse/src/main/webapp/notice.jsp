@@ -11,10 +11,35 @@
 
 		<!-- SCRIPTS -->
 		<script src="./js/jquery-3.6.0.js"></script>
+		<script src="./js/app.js"></script>
 		<script>
 			window.onload = function()
             {
-                $(".notice-wrap").hide();
+				$.ajax({
+					url: 'notice.do',
+					method: 'GET',
+					success: (response) => {
+						
+						let data = response.data;
+						
+						let tmp = $('#notice-body');
+						let count = 1;
+						for(item in data)
+						{
+							tmp.append('<tr id="notice-item" ><td class="notice-n">'+count+'</td>'
+		                        +'<td class="notice-title" style="display:block; white-space:nowrap; overflow: hidden; text-overflow: ellipsis" onclick="unfoldNotice('+count+')">'
+		                        +data[item].title+'<div id="notice-'+count+'" class="notice-wrap" style="height: 100%;  word-break:break-all">'
+		                        +data[item].content+'</div></td>'
+		                        +'<td class="notice-date">'+data[item].date+'</td></tr>');
+							
+							count++;
+						}
+						
+						
+						$(".notice-wrap").hide();
+					}
+					
+				})
             }
             
 		</script>
@@ -45,7 +70,7 @@
 		                    <div id="container-content-header"><h2>공지사항</h2></div>
 		    
 		                    <div id="content-container">
-		                        <table id="notice-table" >
+		                        <table id="notice-table" style="table-layout: fixed" >
 		                            <thead id="notice-head">
 		                                <tr>
 		                                    <th id="notice-head-n">#</th>
@@ -53,29 +78,8 @@
 		                                    <th id="notice-head-date">날짜</th>
 		                                </tr>
 		                            </thead>
-		                            <tbody>
-		                                <tr id="notice-item" >
-		                                    <td class="notice-n">1</td>
-		                                    <td class="notice-title" onclick="unfoldNotice(1)">
-		                                        aa
-		                                    	<div id="notice-1" class="notice-wrap">
-		                                    	    sss
-		                                    	</div>
-		                                    </td>
-		                                    <td class="notice-date">2022/01/16</td>
-		                                </tr>
-		
-		                                <tr id="notice-item">
-		                                    <td class="notice-n">1</td>
-		                                    <td class="notice-title" onclick="unfoldNotice(2)">
-		                                        aa
-		                                    	<div id="notice-2" class="notice-wrap">
-		                                    	    sss
-		                                    	</div>
-		                                    </td>
-		                                    <td class="notice-date">2022/01/16</td>
-		                                </tr>
-		
+		                            <tbody id="notice-body">
+		                               
 		                            </tbody>
 		                        </table>
 		                    </div>

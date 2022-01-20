@@ -1,5 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-    
+<%
+
+	String iid = request.getParameter("item");
+
+/*
+	if(iid == null) 
+	{
+		%>
+		<script>
+			alert('잘못된 접근입니다');
+			location.href='/';
+		</script>
+		<%
+	}*/
+	
+%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +27,37 @@
 		<!-- SCRIPTS -->
 		<script src="./js/app.js"></script>
 		<script src="./js/jquery-3.6.0.js"></script>
+		
+		
+		<script>
+			window.onload = () => {
+				$.ajax({
+					url: 'item.do',
+			        method: 'GET',
+			        data: {
+			        	'iid' : <%= iid %>
+			        },
+			        success : (response) => {		        	
+		        			let data = response.data;
+		        			
+		        			$('#seller-notice').text(data.description);
+		        			$('#item-wrap-info-title').text(data.title);
+		        			$('#item-wrap-info-size').text(data.size);
+		        			$('#item-wrap-info-price').text(data.price);
+		        			$('#item-wrap-info-model').text(data.model);
+		        			$('#item-wrap-info-release-date').text(data.release_date);
+		        			$('#item-wrap-info-release-price').text(data.release_price);
+		        			$('#item-wrap-info-color').text(data.color);
+		        			$('#item-wrap-info-like-count').text(data.like_count);
+		        			$('#item-wrap-info-cover').css({'background':'url('+data.cover+')'});
+		        			$('#item-wrap-info-cover').css({'background-repeat':'no-repeat'});
+		        			$('#item-wrap-info-cover').css({'background-position':'center'});
+		        			$('#item-wrap-info-cover').css({'background-size':'cover'});
+		        			
+			        }	     
+				});
+			}
+		</script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
@@ -28,26 +74,26 @@
 				<!-- Main -->
 				<div>
 					<div id="item-container">
+					
 						<h1>상품정보</h1>
 						<div id="item-wrap" style="display: flex;">
 					
 							<div style="min-width: 560px">
-								<div style="width: 100%; height: 500px; background-color: #F5F5F5">
+								<div  id="item-wrap-info-cover" style="width: 100%; height: 500px; background-color: #F5F5F5l;">
 								이미지
 								</div>
 								<div style="display:grid; height:100px; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; margin-top: 10px; gap: 16px; justify-content: stretch">
-									<div class="item-wrap-item-thumb" style="background-color: #F5F5F5">1</div>
-									<div class="item-wrap-item-thumb" style="background-color: #F5F5F5">2</div>
-									<div class="item-wrap-item-thumb" style="background-color: #F5F5F5">3</div>
-									<div class="item-wrap-item-thumb" style="background-color: #F5F5F5">4</div>
-									<div class="item-wrap-item-thumb" style="background-color: #F5F5F5">5</div>
+									<div class="item-wrap-item-thumb">1</div>
+									<div class="item-wrap-item-thumb">2</div>
+									<div class="item-wrap-item-thumb">3</div>
+									<div class="item-wrap-item-thumb">4</div>
+									<div class="item-wrap-item-thumb">5</div>
 								</div>
 								
 								<div style="margin-top: 50px">
 									<div><h2>판매자가 알려요</h2></div>
-									<div style="background-color: #F5F5F5; margin-top: 20px; padding: 10px">
-										옷 정리하다 입지 않는 옷 팝니다.<br>
-										상태는 좋구요. 믿고 사세요
+									<div id="seller-notice" style="background-color: #F5F5F5; margin-top: 20px; padding: 10px">
+										
 									</div>
 								</div>
 							</div>
@@ -55,21 +101,22 @@
 							
 							<div id="item-wrap-info">
 								<div id="item-wrap-info-brand">Jordan 1</div>
-								<div id="item-wrap-info-title"><h2>Jordan 1 Retro High OG Patent Bred</h2></div>
+								<h2 id="item-wrap-info-title"></h2>
+								
 								<table id="item-table">
 									<tr>
 										<th class="item-wrap-info-head">인증여부</th>
-										<td class="item-wrap-info-item">인증됨  <span class="material-icons">verified</span></td>
+										<td class="item-wrap-info-item" id="item-wrap-info-certified">인증됨  <span class="material-icons">verified</span></td>
 									</tr>
 									
 									<tr>
 										<th class="item-wrap-info-head">사이즈</th>
-										<td class="item-wrap-info-item">270</td>
+										<td class="item-wrap-info-item" id="item-wrap-info-size"></td>
 									</tr>
 									
 									<tr>
 										<th class="item-wrap-info-head">가격</th>
-										<td class="item-wrap-info-item">2,000,000 원</td>
+										<td class="item-wrap-info-item" id="item-wrap-info-price"></td>
 									</tr>
 									
 									<tr>
@@ -78,21 +125,21 @@
 										
 											<tr>
 												<th class="item-wrap-info-head">모델번호</th>
-												<td>112264-123</td>
+												<td id="item-wrap-info-model"></td>
 											</tr>
 											
 											<tr>
 												<th class="item-wrap-info-head">출시일</th>
-												<td>2022-01-05</td>
+												<td id="item-wrap-info-release-date"></td>
 											</tr>
 											
 											<th class="item-wrap-info-head">발매가격</th>
-												<td>1,000,000</td>
+												<td id="item-wrap-info-release-price"></td>
 											</tr>
 											
 											<tr>
 												<th class="item-wrap-info-head">컬러</th>
-												<td>BLACK</td>
+												<td id="item-wrap-info-color"></td>
 											</tr>
 											
 										</td>
@@ -100,17 +147,17 @@
 									
 									<tr>
 										<th class="item-wrap-info-head">찜한 수</th>
-										<td class="item-wrap-info-item">1,100회</td>
+										<td class="item-wrap-info-item" id="item-wrap-info-like-count"></td>
 									</tr>
-								</table>
+									</table>
 								
-								<div style="width:100%; margin-top: 20px">
+								<div style="width:100%; margin:20px 0">
 									<h4>구매 전 꼭 확인해 주세요</h4>
 									<div style="width:100%; margin-top: 10px; padding-top: 10px" onclick="openPolicy()">
 										검수안내
 									</div>
 									
-									<div id="shoekream-policy" style="display: none" >
+									<div id="shoekream-policy" style="display: none; margin-top: 10px" >
 									KREAM의 검수기준은 거래 당사자간 원활한 거래와 보다 균형있는 검수기준 확립을 위해 지속적으로 업데이트 되고 있습니다.<br>
 									거래에 앞서 최신 검수기준을 참고하시기 바랍니다.<br>
 									<br>

@@ -30,32 +30,29 @@
 		
 		
 		<%
-		
-			Cookie []cookies = request.getCookies();
-			if(cookies != null)
+		Cookie []cookies = request.getCookies();
+		if(cookies != null)
+		{
+			for(Cookie cookie : cookies)
 			{
-				for(Cookie cookie : cookies)
+				String cookie_name = cookie.getName();
+				String cookie_id = cookie.getValue();
+				if(cookie_name.equals("save_id"))
 				{
-					String cookie_name = cookie.getName();
-					String cookie_id = cookie.getValue();
-					if(cookie_name.equals("save_id"))
-					{
-						%>
-						
-						<script>
-							window.onload = () => {
-								$('#login-id').val('<%= cookie_id %>');
-							}
-						</script>
-						<%
-					}
+					%>
+					
+					<script>
+						window.onload = () => {
+							$('#login-id').val('<%= cookie_id %>');
+						}
+					</script>
+					<%
 				}
 			}
-			
-		%>
-		<script>
-			
+		}
 		
+		%>
+		<script>		
 			function login() 
 			{
 				const id = $('#login-id').val();
@@ -96,7 +93,10 @@
 							<div id="">비밀번호</div>
 							<div><input id="login-pw" type="password" style="font-size:20px;" onkeypress="javascript:if(event.keyCode==13){login()}"></div>
 							<div><input id="login-saveid" type="checkbox" style=" margin-right: 4px">아이디 저장</div>
-							<button class="default-button button-positive" onclick="login()">로그인</butoon></button>
+							<div>
+								<button class="default-button button-positive" onclick="login()">로그인</butoon></button>
+								<button class="default-button button-positive" onclick="location.href='./signup'">회원가입</butoon>
+							</div>
 							<div><a href="./signup"><b>회원가입</b></a> 또는 <a href="./find_account"><b>아이디</b></a> 
 							또는 <a href="./find_account"><b>비밀번호</b></a>가 생각나지 않아요</div>
 		    			</div>

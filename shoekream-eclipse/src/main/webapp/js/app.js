@@ -159,6 +159,7 @@ function openPolicy() {
 	$('#shoekream-policy').toggle();
 }
  
+
 function callDibs() {
 	
 }

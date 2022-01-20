@@ -1,5 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
+<%
+    if(session.getAttribute("user") == null) 
+    {
+    %>
+    <script>
+    	alert('잘못된 접근입니다')
+        location.href='/'
+    </script>
+    <%
+    }
+%>
+    
 <!DOCTYPE html>
 <html>
 	<head>

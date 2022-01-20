@@ -1,5 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-    
+
+<%
+    if(session.getAttribute("user") == null) 
+    {
+    %>
+    <script>
+    	alert('잘못된 접근입니다')
+        location.href='/'
+    </script>
+    <%
+    }
+%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,228 +28,28 @@
        		
         </script>
         <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<script>
+		
+			$.ajax({
+				
+				url: 'login.do',
+		        method: 'POST',
+		        data: {
+		           'id' : id,
+		           'pw' : pw,
+		           'isSaveId' : isSave
+		        },
+		        success : (response) => {
+		        	
+					if(response.result === 'OK') location.href='/';
+					else alert('아이디 또는 비밀번호가 맞지 않습니다');
+		        }	      
+			})
+		</script>
+		
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
-		<style>
-        	/* table 
-			{
-				margin-left: auto;
-				margin-right: auto;
-			}
-			
-			h2
-			{
-				margin-left: auto;
-				margin-right: auto;
-				background-color: red;
-			}
-			
-			input[type=text] 
-			{
-				border: 0px;
-				border-bottom: #B0B0B0 2px solid;
-			}
-			input[type=password] 
-			{
-				border: 0px;
-				border-bottom: #B0B0B0 2px solid;
-			}
-			
-			input:focus 
-			{
-				outline: none;
-			}
-			
-			td 
-			{
-				height: 50px;
-			}
-			
-			.btn 
-			{
-				color: white;
-				width: 110px;
-				height: 50px;
-				display: inline-block;
-				box-sizing: border-box;
-				padding: 12px 0px;
-				border-radius: 15px;
-			}
-			.shoe 
-			{
-				color: black;
-				width: 110px;
-				height: 50px;
-				display: inline-block;
-				box-sizing: border-box;
-				padding: 12px 0px;
-				border-radius: 15px;
-			}		
-			.size 
-			{
-				color: black;
-				width: 50px;
-				height: 50px;
-				display: inline-block;
-				box-sizing: border-box;
-				padding: 12px 0px;
-				border-radius: 15px;
-			}
-			#button
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #5ED1E9;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#button2
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #E95E5E;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#box
-			{
-				border-top-right-radius : 10px;
-				border-top-left-radius : 10px;
-				border-bottom-right-radius : 10px;
-				border-bottom-left-radius : 10px;
-				display:float;
-				background-color:#EFEFEF; 
-				width:280px; 
-				height:60px; 
-				padding-top:12px;
-			}
-			#tr
-			{
-				border-bottom:1px solid #ADADAD; 
-				padding-top:30px;
-			}
-			.mybutton
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #5ED1E9;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-				
-				color: white;
-				width: 110px;
-				height: 50px;
-				display: inline-block;
-				box-sizing: border-box;
-				padding: 12px 0px;
-				border-radius: 15px;
-			}
-			.mybutton2
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #E95E5E;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-				
-				color: white;
-				width: 110px;
-				height: 50px;
-				display: inline-block;
-				box-sizing: border-box;
-				padding: 12px 0px;
-				border-radius: 15px;
-			}
-			#adbutton1
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #5ED1E9;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#adbutton2
-			{
-				height : 40px;
-				width : 80px;
-				background-color : #E95E5E;
-				font-size : 10pt;
-				color : #FFFFFF;
-				border: 0px;
-				border-top-right-radius : 15px;
-				border-top-left-radius : 15px;
-				border-bottom-right-radius : 15px;
-				border-bottom-left-radius : 15px;
-			}
-			#prbox
-			{
-				border-top-right-radius : 10px;
-				border-top-left-radius : 10px;
-				border-bottom-right-radius : 10px;
-				border-bottom-left-radius : 10px;
-				display:float;
-				background-color:#EFEFEF; 
-				width:280px; 
-				height:60px; 
-				padding-top:12px;
-			}
-			#prline
-			{
-				border : 1px;
-			}
-		
-		
-		.bg_content
-		{
-			display: none;
-			position: fixed;
-			left: 0px;
-			top: 0px;
-			width: 100%;
-			height: 100%;
-			background-color: black;
-			opacity: 0.5;
-			z-index: 100;			
-		}
-		
-		.notice_content
-		{
-			display: none;
-			position: fixed;
-			left: 600px;
-			top: 400px;
-			width: 600px;
-			height: 200px;
-			background-color: white;
-			z-index: 101;	
-		}	    */ 
-        </style>
 		
 		<!--INFORMATION -->
 		<title>SHOEKREAM - 한정판 중고 거래</title>

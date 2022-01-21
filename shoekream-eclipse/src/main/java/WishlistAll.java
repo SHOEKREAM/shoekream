@@ -65,7 +65,6 @@ public class WishlistAll extends HttpServlet
 		}
 		PrintWriter out = resp.getWriter();
 		out.print(data.toJSONString());
-		System.out.print(data.toJSONString());
 	}
 	
 

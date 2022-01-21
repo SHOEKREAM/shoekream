@@ -31,27 +31,32 @@ public class Wishlist extends HttpServlet
 		
 		String iid = req.getParameter("iid");
 		String uid = req.getSession().getAttribute("user").toString();
-
 		JSONObject data = new JSONObject();
-		
-		try(Connection conn =  DriverManager.getConnection(host, userid, passwd);
-				Statement stmt = conn.createStatement();
-				Statement stmt2 = conn.createStatement()) 
-		{
-			String q = "INSERT INTO wishlist value("+uid+","+iid+" )";
-			stmt.executeUpdate(q);
-			
-			q = "UPDATE wishlist set i_like_count = i_like_count + 1 WHERE iid = " + iid;
-			System.out.print(q);
-			stmt2.executeUpdate(q);
-			
-			
-			data.put("result", "OK");
-		}catch (Exception e) {
-			// TODO: handle exception
-
+		if(uid == null ) {
 			
 			data.put("result", "FAIL");
+		}
+		else {
+			
+			
+			try(Connection conn =  DriverManager.getConnection(host, userid, passwd);
+					Statement stmt = conn.createStatement();
+					Statement stmt2 = conn.createStatement()) 
+			{
+				String q = "INSERT INTO wishlist value("+uid+","+iid+" )";
+				stmt.executeUpdate(q);
+				
+				q = "UPDATE item SET i_like_count = i_like_count + 1 WHERE iid = " + iid;
+				stmt2.executeUpdate(q);
+				
+				
+				data.put("result", "OK");
+			}catch (Exception e) {
+				// TODO: handle exception
+
+				
+				data.put("result", "FAIL");
+			}
 		}
 		PrintWriter out = resp.getWriter();
 		out.print(data.toJSONString());

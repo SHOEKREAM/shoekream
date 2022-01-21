@@ -12,6 +12,7 @@
     color: black;
 
     list-style: none;
+   
 }
 
 header {
@@ -161,6 +162,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin: 0 10px;
 	text-align: center;
 	cursor: pointer;
+
 }
 
 .filter-item div:nth-child(1) {
@@ -221,7 +223,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 50px;
     text-align: left;
 }
-#notice-head-title { text-align: left; }
+
 #notice-head-date { width: 100px; }
 #notice-table, #faq-tatble, 
 #help-table, #mypage-table, 
@@ -233,9 +235,7 @@ input[type="number"]::-webkit-inner-spin-button {
 #notice-table tbody{
     vertical-align: top;
 }
-#notice-head {
-    /* border-bottom: solid black 1px; */
-}
+
 #notice-head, #notice-item { height: 30px; }
 
 
@@ -277,7 +277,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 #wishlist-table, #sales-list-table, #purchase-list-table, 
-#check-container, #item-table, #item-wrap { margin-top: 50px }
+#check-container, #item-table, #item-wrap { margin-top: 30px }
 #wishlist-head { border-bottom: solid black 1px;}
 
 #wishlist-head-n, #wishlist-item-n,
@@ -286,7 +286,8 @@ input[type="number"]::-webkit-inner-spin-button {
 #sales-list-head-title, #sales-list-item-title,
 #purchase-list-head-n, #purchase-item-n,
 #purchase-list-head-title, #purchaset-item-title,
-#help-list-head-title .item-wrap-info-head{
+#help-list-head-title, .item-wrap-info-head,
+#notice-head-title {
   text-align: left;
 }
 
@@ -446,7 +447,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 #check-table {
-	margin-left: 20px
+	margin-left: 20px;
 }
 .check-item {
 	display: flex;
@@ -456,10 +457,6 @@ input[type="number"]::-webkit-inner-spin-button {
 	width: 150px;
 	text-align: left;
 	
-}
-
-.check-item-head, .check-item-item {
-/* 	font-size: 20px */
 }
 
 .check-item-cover {
@@ -478,11 +475,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 #item-wrap-info {
-	margin-left: 20px
+	margin-left: 20px;
 }
 
 .item-wrap-info-head {
-	width: 100px
+	width: 100px;
 }
 
 .item-wrap-info-head, .item-wrap-info-item {
@@ -500,7 +497,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .register-input-container h2 {
-	margin-bottom: 10px
+	margin-bottom: 10px;
 }
 
 

@@ -9,7 +9,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

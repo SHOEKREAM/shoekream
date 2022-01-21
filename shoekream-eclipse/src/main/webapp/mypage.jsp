@@ -77,7 +77,7 @@
 								<table id="mypage-table">
 									<tr>
 										<td id="mypage-head">이름</td>
-										<td id="mypage-name">ㅁㅁ</td>
+										<td id="mypage-name">test</td>
 									</tr>
 									
 									<tr>

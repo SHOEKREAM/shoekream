@@ -37,8 +37,9 @@ public class ItemAll extends HttpServlet
 		try(Connection conn =  DriverManager.getConnection(host, userid, passwd);
 				Statement stmt = conn.createStatement()) 
 		{
+			
 			String q = "SELECT * FROM item ORDER BY RAND()LIMIT 8";
-	
+			
 			ResultSet result = stmt.executeQuery(q);
 			
 	

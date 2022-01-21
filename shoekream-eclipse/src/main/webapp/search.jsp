@@ -35,21 +35,39 @@
 
 						for(item in data)
 						{
-							grid.append('<div class="result-item"'
-							 	+ 'style="width: 272px; height: auto;" onclick="go('+data[item].id+')">'
-					            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
-					            +'<div class="result-item-info">'
-					            +   '<div class="info-validation">'
-					            +  		'<div>'+data[item].isCertified+'</div>'
-								+	'<div><span class="material-icons">verified</span></div>'
-								+	'</div>'
-					            +    '<div class="info-brand">Jordan</div>'
-					            +    '<div class="info-name" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">'+data[item].title+'</div>'
-					            +    '<div class="info-price">'+data[item].price+'</div>'
-					            +    '<div class="info-wishcount">'
-								+		'<span class="material-icons">bookmark_border</span>'
-								+		'<div class="info-wishcount-count">'+data[item].like_count+'</div>'
-								+	'</div></div></div>');
+							if(data[item].isCertified === '0')
+							{
+								grid.append('<div class="result-item"'
+									 	+ 'style="width: 272px; height: auto; border-radius:20px; overflow: hidden;" onclick="go('+data[item].id+')">'
+							            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
+							            +'<div class="result-item-info">'
+							            +   '<div class="info-validation">'
+							            +  		'<div>미인증</div>'
+										+	'</div>'
+							            //+    '<div class="info-brand">Jordan</div>'
+							            +    '<div class="info-name" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">'+data[item].title+'</div>'
+							            +    '<div class="info-price">'+convertToMonetaryUnit(data[item]).price+'</div>'
+							            +    '<div class="info-wishcount">'
+										+		'<span class="material-icons">bookmark_border</span>'
+										+		'<div class="info-wishcount-count">'+data[item].like_count+'</div>'
+										+	'</div></div></div>');
+							} else {
+								grid.append('<div class="result-item"'
+									 	+ 'style="width: 272px; height: auto; border-radius:20px; overflow: hidden;" onclick="go('+data[item].id+')">'
+							            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
+							            +'<div class="result-item-info">'
+							            +   '<div class="info-validation">'
+							            +  		'<div>인증됨</div>'
+										+	'<div><span class="material-icons">verified</span></div>'
+										+	'</div>'
+							            //+    '<div class="info-brand">Jordan</div>'
+							            +    '<div class="info-name" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">'+data[item].title+'</div>'
+							            +    '<div class="info-price">'+convertToMonetaryUnit(data[item].price)+'</div>'
+							            +    '<div class="info-wishcount">'
+										+		'<span class="material-icons">bookmark_border</span>'
+										+		'<div class="info-wishcount-count">'+data[item].like_count+'</div>'
+										+	'</div></div></div>');
+							}
 						}
 				    }
 				});
@@ -59,38 +77,61 @@
 				
 			function search() 
 			{
-		 		window.onload = $.ajax(
-				{
-					url: 'search.do',
-					method: 'GET',
-					data: {'search' : <%= search %> },
-				    success : (response) => 
-					{
-						let data = response.data;
-						let grid = $('#search-result');
+				let tmp = $('#search-input').val;
+		 		if(tmp.length > 0) alert('검색어를 입력해 주세요');
+		 		else {
+		 			window.onload = $.ajax(
+		 					{
+		 						url: 'search.do',
+		 						method: 'GET',
+		 						data: {'search' : <%= search %> },
+		 					    success : (response) => 
+		 						{
+		 							let data = response.data;
+		 							let grid = $('#search-result');
 
-						grid.empty();
-						for(item in data)
-						{
-							grid.append('<div class="result-item"'
-							 	+ 'style="width: 272px; height: auto;" onclick="go('+data[item].id+')">'
-					            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
-					            +'<div class="result-item-info">'
-					            +   '<div class="info-validation">'
-					            +  		'<div>'+data[item].isCertified+'</div>'
-								+	'<div><span class="material-icons">verified</span></div>'
-								+	'</div>'
-					            +    '<div class="info-brand">Jordan</div>'
-					            +    '<div class="info-name" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">'+data[item].title+'</div>'
-					            +    '<div class="info-price">'+data[item].price+'</div>'
-					            +    '<div class="info-wishcount">'
-								+		'<span class="material-icons">bookmark_border</span>'
-								+		'<div class="info-wishcount-count">'+data[item].like_count+'</div>'
-								+	'</div></div></div>');
-						}
-				    }
-			
-				});
+		 							grid.empty();
+		 							for(item in data)
+		 							{
+		 								if(data[item].isCertified === '0')
+		 								{
+		 									grid.append('<div class="result-item"'
+		 										 	+ 'style="width: 272px; height: auto; border-radius:20px; overflow: hidden;" onclick="go('+data[item].id+')">'
+		 								            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
+		 								            +'<div class="result-item-info">'
+		 								            +   '<div class="info-validation">'
+		 								            +  		'<div>미인증</div>'
+		 								
+		 											+	'</div>'
+		 								            //+    '<div class="info-brand">Jordan</div>'
+		 								            +    '<div class="info-name" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">'+data[item].title+'</div>'
+		 								            +    '<div class="info-price">'+convertToMonetaryUnit(data[item]).price+'</div>'
+		 								            +    '<div class="info-wishcount">'
+		 											+		'<span class="material-icons">bookmark_border</span>'
+		 											+		'<div class="info-wishcount-count">'+data[item].like_count+'</div>'
+		 											+	'</div></div></div>');
+		 								} else {
+		 									grid.append('<div class="result-item"'
+		 										 	+ 'style="width: 272px; height: auto; border-radius:20px; overflow: hidden;" onclick="go('+data[item].id+')">'
+		 								            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
+		 								            +'<div class="result-item-info">'
+		 								            +   '<div class="info-validation">'
+		 								            +  		'<div>인증됨</div>'
+		 											+	'<div><span class="material-icons">verified</span></div>'
+		 											+	'</div>'
+		 								            //+    '<div class="info-brand">Jordan</div>'
+		 								            +    '<div class="info-name" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">'+data[item].title+'</div>'
+		 								            +    '<div class="info-price">'+convertToMonetaryUnit(data[item].price)+'</div>'
+		 								            +    '<div class="info-wishcount">'
+		 											+		'<span class="material-icons">bookmark_border</span>'
+		 											+		'<div class="info-wishcount-count">'+data[item].like_count+'</div>'
+		 											+	'</div></div></div>');
+		 								}
+		 							}
+		 					    }
+		 				
+		 					});
+	 			}
 			}
 			
 			function go(position)

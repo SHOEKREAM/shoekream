@@ -43,7 +43,7 @@
 		        			$('#seller-notice').text(data.description);
 		        			$('#item-wrap-info-title').text(data.title);
 		        			$('#item-wrap-info-size').text(data.size);
-		        			$('#item-wrap-info-price').text(data.price);
+		        			$('#item-wrap-info-price').text(convertToMonetaryUnit(data.price));
 		        			$('#item-wrap-info-model').text(data.model);
 		        			$('#item-wrap-info-release-date').text(data.release_date);
 		        			$('#item-wrap-info-release-price').text(data.release_price);
@@ -132,8 +132,8 @@
 								
 								<table id="item-table">
 									<tr>
-										<th class="item-wrap-info-head">인증여부</th>
-										<td class="item-wrap-info-item" id="item-wrap-info-certified">인증됨  <span class="material-icons">verified</span></td>
+										<th class="item-wrap-info-head" style="text-algin: left">인증여부</th>
+										<td class="item-wrap-info-item" id="item-wrap-info-certified" valign="middle">인증됨  <span class="material-icons" style="font-size: 20px;">verified</span></td>
 									</tr>
 									
 									<tr>
@@ -149,7 +149,6 @@
 									<tr>
 										<th class="item-wrap-info-head">상품정보</th>
 										<td>
-										
 											<tr>
 												<th class="item-wrap-info-head">모델번호</th>
 												<td id="item-wrap-info-model"></td>
@@ -160,7 +159,8 @@
 												<td id="item-wrap-info-release-date"></td>
 											</tr>
 											
-											<th class="item-wrap-info-head">발매가격</th>
+											<tr>
+												<th class="item-wrap-info-head">발매가격</th>
 												<td id="item-wrap-info-release-price"></td>
 											</tr>
 											
@@ -168,15 +168,15 @@
 												<th class="item-wrap-info-head">컬러</th>
 												<td id="item-wrap-info-color"></td>
 											</tr>
-											
 										</td>
+										
 									</tr>
 									
 									<tr>
 										<th class="item-wrap-info-head">찜한 수</th>
 										<td class="item-wrap-info-item" id="item-wrap-info-like-count"></td>
 									</tr>
-									</table>
+								</table>
 								
 								<div style="width:100%; margin:20px 0">
 									<h4>구매 전 꼭 확인해 주세요</h4>

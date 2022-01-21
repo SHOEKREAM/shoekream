@@ -46,7 +46,7 @@
 		                    <div><a href="./mypage"><h1>#정보수정</h1></a></div>
 		                    <div><a href="./purchase_list"><h1>#구매내역</h1></a></div>
 		                    <div><a href="./sales_list"><h1>#판매내역</h1></a></div>
-		                    <div><a href="./help"><h1>#문의목록</h1></a></div>
+		                    <div><a href="./help_list"><h1>#문의목록</h1></a></div>
 		                </div>
               			<div id="support-container-content">
 			                <h1>판매내역</h1>

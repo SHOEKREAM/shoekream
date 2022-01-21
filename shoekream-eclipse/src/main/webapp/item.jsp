@@ -57,6 +57,35 @@
 			        }	     
 				});
 			}
+			
+			function isValidateUser()
+			{
+				<%
+				String user = (String)request.getSession().getAttribute("user");
+				if(user != null)
+				{
+					%>
+					return true;
+					<%
+				} else %> return false; <%
+				
+				%>
+			}
+			
+			function callDibs()
+			{
+				if(!isValidateUser) location.href='/login';
+				else {
+					$.ajax({
+						url: 'wishlist.do',
+				        method: 'GET',
+				        data: { 'iid' : <%= iid %>},
+						success: (response) => {
+							location.href='./wishlist';	
+						}
+					});
+				}
+			}
 		</script>
 		
 		<!-- STYLE -->
@@ -79,9 +108,7 @@
 						<div id="item-wrap" style="display: flex;">
 					
 							<div style="min-width: 560px">
-								<div  id="item-wrap-info-cover" style="width: 100%; height: 500px; background-color: #F5F5F5l;">
-								이미지
-								</div>
+								<div  id="item-wrap-info-cover" style="width: 100%; height: 500px; background-color: #F5F5F5l;"></div>
 								<div style="display:grid; height:100px; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; margin-top: 10px; gap: 16px; justify-content: stretch">
 									<div class="item-wrap-item-thumb">1</div>
 									<div class="item-wrap-item-thumb">2</div>
@@ -184,8 +211,8 @@
 								</div>
 								
 								<div style="display: flex; justify-content: center; margin-top: 10px;">
-									<button class="default-button button-positive" onclick="callDibs()">구입하기</button>
-									<button class="default-button button-positive" onclick="buyItem()">찜하기</button>
+									<button class="default-button button-positive" onclick="buyItem()">구입하기</button>
+									<button class="default-button button-positive" onclick="callDibs()">찜하기</button>
 								</div>
 							</div>
 						</div>

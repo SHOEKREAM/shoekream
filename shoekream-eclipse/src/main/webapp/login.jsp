@@ -72,7 +72,11 @@
 				        },
 				        success : (response) => {
 				        	
-							if(response.result === 'OK') location.href='/';
+							if(response.result === 'OK')
+							{
+							
+							 	location.href='/';
+							}
 							else alert('아이디 또는 비밀번호가 맞지 않습니다');
 				        }	      
 					})

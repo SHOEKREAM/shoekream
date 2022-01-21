@@ -23,8 +23,7 @@
 	
 	
 
-	$(window).scroll(() =>
-	{ 
+	$(window).scroll(() => { 
 	   if($(window).scrollTop() == $(document).height() - $(window).height())
 	   { 
 		   $.ajax({
@@ -40,7 +39,7 @@
 					for(item in data)
 					{
 						grid.append('<div class="result-item"'
-						 	+ 'style="width: 272px; height: auto;" onclick="go('+data[item].id+'">'
+						 	+ 'style="width: 272px; height: auto;" onclick="go('+data[item].id+')">'
 				            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
 				            +'<div class="result-item-info">'
 				            +   '<div class="info-validation">'
@@ -84,8 +83,8 @@
 			for(item in data)
 			{
 				grid.append('<div class="result-item"'
-				 	+ 'style="width: 272px; height: auto;" onclick="go('+data[item].id+'">'
-		            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover;"></div>'
+				 	+ 'style="width: 272px; height: auto;" onclick="go('+data[item].id+')">'
+		            +'<div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('+data[item].cover+'); background-size: cover; border-radius: 20px; overflow:hidden;"></div>'
 		            +'<div class="result-item-info">'
 		            +   '<div class="info-validation">'
 		            +  		'<div>'+data[item].isCertified+'</div>'
@@ -103,6 +102,11 @@
 		
 		
 	});
+				
+	function search(iid)
+	{
+		location.href='./search?search='+ $('#search-input').val();
+	}
 </script>
 
 <!-- STYLE -->
@@ -132,7 +136,7 @@
 			</div>
 		</div>
 	 -->
-	<div id="search-container">
+	<div id="search-container" style="margin-top: 40px">
         <div style="width: 700px; height:50px; display:flex; border: none; border-bottom: solid black 2px;">
             <input id="search-input" style="width:666px; border: none; margin: 0 10px" type="text" placeholder="검색어를 입력해 주세요" onKeypress="javascript:if(event.keyCode===13){search()}" onkeyup="notifyStatusSearch()">
             <div id="input-clear-container" style="display: flex; align-items: center;" onclick="clearSearchText()">
@@ -141,135 +145,14 @@
         </div>
     </div>
     <div id="brand-filter-container">
-  
-     	
-         
     </div>
     <div id="search-filter">
        <div>필터</div>
        <div style="width: 100%; height: 50px;"></div>
     </div>
     <div id="search-result" style="width: 100%; ">
-		<!--     
-       <div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>	
 		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>	
-		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>	
-		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>	
-		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>	
-		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>	
-		
-		<div class="result-item" style="width: 272px; height: auto;" onclick="location.href='./item'">
-            <div class="result-item-cover" style="width: 272px; height: 263px; background-image:url('/img/jordan-1-retro.png');"></div>
-            <div class="result-item-info">
-                <div class="info-validation">
-               		<div>인증됨</div>
-					<div><span class="material-icons">verified</span></div>
-				</div>
-                <div class="info-brand">Jordan</div>
-                <div class="info-name">Jordan 1 Retro High OG ...</div>
-                <div class="info-price">1,000,000원</div>
-                <div class="info-wishcount">
-					<span class="material-icons">bookmark_border</span>
-					<div class="info-wishcount-count">1,100회</div>
-				</div>
-            </div>
-		</div>
 		
     </div>
- -->
+
 </main>

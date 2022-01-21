@@ -32,37 +32,28 @@
 		                    <div><a href="./sales_list"><h1>#판매내역</h1></a></div>
 		                    <div><a href="./help_list"><h1>#문의목록</h1></a></div>
 		                </div>
-              			<div id="support-container-content">
-			                <h1>구매내역</h1>
-							<div id="purchase-list-wrap">
-								<table id="purchase-list-table">				
+              			<div id="help-container-content">
+			                <h1>문의목록</h1>
+							<div id="help-list-wrap">
+								<table id="help-list-table" style="margin-top:50px">				
 									<thead>
-										<th id="purchase-list-head-n">#</th>
-										<th id="purchase-list-head-title">상품명</th>
-										<th id="purchase-list-head-size">사이즈</th>
-										<th id="purchase-list-head-price">가격</th>
-										<th id="purchase-list-head-seller">판매자</th>
-										<th id="purchase-list-head-buydate">구매일</th>
+										<th id="help-list-head-n">#</th>
+										<th id="help-list-head-category">문의구분</th>
+										<th id="help-list-head-title">문의명</th>
+										<th id="help-list-head-date">문의일자</th>
+										<th id="help-list-head-isreplay">답변여부</th>
 									</thead>
 									
 									<tbody>
 										<tr>			
-											<td class="purchase-list-item-n">1</td>
-											<td class="purchase-list-item-title"><a href="#">나이키</a></td>
-											<td class="purchase-list-item-size">230</td>
-											<td class="purchase-list-item-price">12,000,000</td>
-											<td class="purchase-list-item-seller">홍길동</td>
-											<td class="purchase-list-item-buydate">2022-01-04</td>
+											<td class="help-list-item-n">1</td>
+											<td class="help-list-item-category">상품문의</td>
+											<td class="help-list-item-title">이거 찐인가요?</td>
+											<td class="help-list-item-date">2022/01/21</td>
+											<td class="help-list-item-isreplay">아니요</td>
 										</tr>
 										
-										<tr>			
-											<td class="purchase-list-item-n">2</td>
-											<td class="purchase-list-item-title"><a href="#">나이키</a></td>
-											<td class="purchase-list-item-size">230</td>
-											<td class="purchase-list-item-price">12,000,000</td>
-											<td class="purchase-list-item-seller">홍길동</td>
-											<td class="purchase-list-item-buydate">2022-01-04</td>
-										</tr>
+										
 									</tbody>
 								</table>	
 							</div>

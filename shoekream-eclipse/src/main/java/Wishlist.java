@@ -5,24 +5,23 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/brand.do")
-public class Brand extends HttpServlet
+@WebServlet("/wishlist.do")
+public class Wishlist extends HttpServlet 
 {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
+
 		
 		resp.setContentType("application/json;");
 		
@@ -30,44 +29,31 @@ public class Brand extends HttpServlet
 		String userid = "user";
 		String passwd = "!!User11@@";
 		
-		PrintWriter out = resp.getWriter();
+		String iid = req.getParameter("iid");
+		String uid = req.getSession().getAttribute("user").toString();
+
+		JSONObject data = new JSONObject();
 		
 		try(Connection conn =  DriverManager.getConnection(host, userid, passwd);
-				Statement stmt = conn.createStatement()) 
+				Statement stmt = conn.createStatement();
+				Statement stmt2 = conn.createStatement()) 
 		{
-			String q = "SELECT * FROM brand";
-	
-			ResultSet result = stmt.executeQuery(q);
+			String q = "INSERT INTO wishlist value("+uid+","+iid+" )";
+			stmt.executeUpdate(q);
 			
-			JSONArray array = new JSONArray();
+			q = "UPDATE wishlist set i_like_count = i_like_count + 1 WHERE iid = " + iid;
+			System.out.print(q);
+			stmt2.executeUpdate(q);
 			
 			
-			while(result.next())
-			{
-				JSONObject object = new JSONObject();
-				object.put("name", result.getString("b_name"));
-				object.put("cover", "./img/"+result.getString("b_cover"));
-
-				
-				array.add(object);
-			}
-			
-			JSONObject data = new JSONObject();
 			data.put("result", "OK");
-			data.put("data", array);
-			
-			
-			out.print(data.toJSONString());
+		}catch (Exception e) {
+			// TODO: handle exception
 
-		} catch(Exception e) {
-			e.printStackTrace();
-			JSONObject object = new JSONObject();
-			object.put("result", "FAIL");
 			
-			out.print(object.toJSONString());
+			data.put("result", "FAIL");
 		}
-				
+		PrintWriter out = resp.getWriter();
+		out.print(data.toJSONString());
 	}
-
-	
 }

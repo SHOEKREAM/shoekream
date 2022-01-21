@@ -24,6 +24,52 @@
 		<!-- SCRIPTS -->
 		<script src="./js/app.js"></script>
 		<script src="./js/jquery-3.6.0.js"></script>
+		<script>
+			window.onload = () => 
+			{
+				$.ajax({
+					url: 'wishlistall.do',
+			        method: 'POST',
+	
+			        success : (response) => 
+					{		        	
+	        			let data = response.data;
+	        		
+	        			console.log(data);
+	        			
+	        			let tmp = $('#wishlist-body');
+	        			
+	        			let count = 1;
+	        			for(item in data)
+	       				{
+	        				tmp.append(
+	        	        			'<tr id="wishlist-item-'+count+'" class="wishlist-item">'
+	        						+'	<td class="wishlist-item-n">'+count+'</td>'
+	        						+'	<td class="wishlist-item-info">'
+	        			            +'        <div class="wishlist-item-info-cover" style="background-image:url('+data[item].cover+'); background-size: cover;"></div>     '          
+	        			            +'        <div class="wishlist-item-info-title" onclick="go('+data[item].iid+')">'+data[item].title+'<span class="material-icons" style="padding-left: 10px;">verified</span></div>'
+	        		                +'	</td>'
+	        	                  	+'	<td class="wishlist-item-size" style="text-align: center">'+data[item].size+'</td>'
+	        		                +'  <td class="wishlist-item-price" >'+data[item].price+'</td>'
+	        						+'	<td class="wishlist-item-seller">111</td>'
+	        		                +'  <td class="wishlist-item-button" onclick="removeWishlistItem('+count+')"><button>삭제</button></td></tr>');
+        					count++;
+	       				}
+			        }	     
+				});
+				
+			}
+			
+			function removeWishlistItem(position) {
+				let item = $('#wishlist-table tbody tr').length;
+			    $('#wishlist-item-'+ position).remove();
+			}
+			
+			function go(position)
+			{
+				location.href='/item?item='+position
+			}
+		</script>
 		
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
@@ -51,29 +97,7 @@
 				                <th id="wishlist-head-buttton">버튼</th>
 							</thead>
 							<tbody id="wishlist-body">
-								<tr id="wishlist-item-1" class="wishlist-item">
-									<td class="wishlist-item-n">1</td>
-									<td class="wishlist-item-info">
-					                    <div class="wishlist-item-info-cover"></div>               
-					                    <div class="wishlist-item-info-title" style="background-image:url('/img/jordan-1-retro.png'); background-color:white;">상품명<span class="material-icons" style="padding-left: 10px;">verified</span></div>
-				                  </td>
-				                  <td class="wishlist-item-size" >111</td>
-				                  <td class="wishlist-item-price" >111</td>
-								  <td class="wishlist-item-seller">111</td>
-					              <td class="wishlist-item-button" onclick="removeWishlistItem(1)"><button>삭제</button></td>
-								</tr>
-					
-				                <tr id="wishlist-item-2" class="wishlist-item">
-									<td class="wishlist-item-n">2</td>
-									<td class="wishlist-item-info">
-					                    <div class="wishlist-item-info-cover"></div>               
-					                    <div class="wishlist-item-info-title">상품명<span class="material-icons" style="padding-left: 10px;">verified</span></div>
-					                </td>
-			                  		<td class="wishlist-item-size" >111</td>
-				                  	<td class="wishlist-item-price" >111</td>
-									<td class="wishlist-item-seller">111</td>
-				                  	<td class="wishlist-item-button" onclick="removeWishlistItem(2)"><button>삭제</button></td>
-								</tr>
+								
 							</tbody>
 						</table>
 					</div>

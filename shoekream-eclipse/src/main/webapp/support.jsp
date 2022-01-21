@@ -14,19 +14,7 @@
 		<!-- STYLE -->
 		<link rel="stylesheet" href="./css/style.css">
 		<style>
-			.btn {
-				color:white;
-				width:110px;
-				height:50px;
-				display:inline-block;
-				box-sizing:border-box;
-				padding:14px 0px;
-			}
 			
-			a{
-				text-decoration:none;
-				color:black;
-			}
 		</style>
 		
 		<!--INFORMATION -->
@@ -45,7 +33,7 @@
 		                    <div><a href="./notice"><h1>#공지사항</h1></a></div>
 		                    <div><a href="./faq"><h1>#자주묻는질문</h1></a></div>
 		                    <div><a href="./policy"><h1>#검수기준</h1></a></div>
-		                    <div><a href="./help"><h1>#문의목록</h1></a></div>
+		                    <div><a href="./help"><h1>#문의하기</h1></a></div>
 		                </div>
 		                <div id="support-container-content">
 		                  

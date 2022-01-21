@@ -140,10 +140,6 @@ function removeChatItem(position)
 	
 }
 
-function removeWishlistItem(position) {
-	let item = $('#wishlist-table tbody tr').length;
-    $('#wishlist-item-'+ position).remove();
-}
 
 function showFindAccountId(){
 	$('#find-wrap-id').show();
@@ -159,10 +155,6 @@ function openPolicy() {
 	$('#shoekream-policy').toggle();
 }
  
-
-function callDibs() {
-	
-}
 
 function buyItem()
 {

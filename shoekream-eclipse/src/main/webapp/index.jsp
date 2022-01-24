@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="./css/style.css">
 		
 		<!--INFORMATION -->
-		<title>SHOEKREAM - 한정판 중고 거래(test)</title>
+		<title>SHOEKREAM - 한정판 중고 거래</title>
 	</head>
 	<body>
 		<div id="app">

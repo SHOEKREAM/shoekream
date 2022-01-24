@@ -26,16 +26,16 @@
 		<script src="./js/jquery-3.6.0.js"></script>
 		<script>
 			 $(document).ready(() => 
-       {
-           $('#chat-input').keydown((event) => 
-           {
-               if(event.keyCode == 13)
-               { 
-                   sendMessage();
-                   //receiveMessage();
-                }
-           });
-       });
+		       {
+		           $('#chat-input').keydown((event) => 
+		           {
+		               if(event.keyCode == 13)
+		               { 
+		                   sendMessage();
+		                   //receiveMessage();
+		                }
+		           });
+		       });
 		</script>
 		
 		<!-- STYLE -->
@@ -57,10 +57,10 @@
 					<div id="mychat-container">
 						<div id="mychat-list">
 							<div class="mychat-list-item-container" >
-								<div class="mychat-list-item mychat-info-item-1">
+								<div class="mychat-list-item mychat-info-item-1" >
 									<div style="width: 60px; height: 60px; background-color: black; border-radius: 100%"></div>
-									<div id="mychat-info-container" style="  display: flex; align-items: center">
-										<div style="width:margin-left: 10px; ">
+									<div id="mychat-info-container" style="  width:auto;  display: flex; align-items: center; ">
+										<div style="margin-left: 20px; width:380px">
 											<div>dddd</div>
 											<div>dsa</div>
 										</div>

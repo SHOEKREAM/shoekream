@@ -212,4 +212,24 @@
     <servlet-name>current_item_check</servlet-name>
     <url-pattern>/current_item_check</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>search</display-name>
+    <servlet-name>search</servlet-name>
+    <jsp-file>/search.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>search</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>help_list</display-name>
+    <servlet-name>help_list</servlet-name>
+    <jsp-file>/help_list.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>help_list</servlet-name>
+    <url-pattern>/help_list</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -66,9 +66,7 @@ public class Login extends HttpServlet
 			}
 			
 			if(!uid.equals(""))
-			{
-				
-				
+			{				
 				object.put("result", "OK");
 				HttpSession session = request.getSession();
 				session.setAttribute("user", uid);

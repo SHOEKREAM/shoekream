@@ -39,42 +39,53 @@
 				<jsp:include page="./header.jsp"/>
 				
 				<!-- Main -->
-				<div>
-					<h1>판매내역</h1>
-					<div id="sales-list-wrap">
-						<table id="sales-list-table">				
-							<thead>
-								<th id="sales-list-head-n">#</th>
-								<th id="sales-list-head-title">상품명</th>
-								<th id="sales-list-head-size">사이즈</th>
-								<th id="sales-list-head-price">가격</th>
-								<th id="sales-list-head-seller">구매자</th>
-								<th id="sales-list-head-buydate">구매일</th>
-							</thead>
-							
-							<tbody>
-								<tr>			
-									<td class="sales-list-item-n">1</td>
-									<td class="sales-list-item-title"><a href="#">나이키</a></td>
-									<td class="sales-list-item-size">230</td>
-									<td class="sales-list-item-price">12,000,000</td>
-									<td class="sales-list-item-seller">홍길동</td>
-									<td class="sales-list-item-buydate">2022-01-04</td>
-								</tr>
-								
-								<tr>			
-									<td class="sales-list-item-n">1</td>
-									<td class="sales-list-item-title"><a href="#">나이키</a></td>
-									<td class="sales-list-item-size">230</td>
-									<td class="sales-list-item-price">12,000,000</td>
-									<td class="sales-list-item-seller">홍길동</td>
-									<td class="sales-list-item-buydate">2022-01-04</td>
-								</tr>
-							</tbody>
-						</table>	
-					</div>
-				</div>
 				
+				<div>
+					<div id="support-container">
+		                <div id="support-nav-container" >
+		                    <div><a href="./mypage"><h1>#정보수정</h1></a></div>
+		                    <div><a href="./purchase_list"><h1>#구매내역</h1></a></div>
+		                    <div><a href="./sales_list"><h1>#판매내역</h1></a></div>
+		                    <div><a href="./help_list"><h1>#문의목록</h1></a></div>
+		                </div>
+              			<div id="support-container-content">
+			                <h1>판매내역</h1>
+							<div id="sales-list-wrap">
+								<table id="sales-list-table">				
+									<thead>
+										<th id="sales-list-head-n">#</th>
+										<th id="sales-list-head-title">상품명</th>
+										<th id="sales-list-head-size">사이즈</th>
+										<th id="sales-list-head-price">가격</th>
+										<th id="sales-list-head-seller">구매자</th>
+										<th id="sales-list-head-buydate">구매일</th>
+									</thead>
+									
+									<tbody>
+										<tr>			
+											<td class="sales-list-item-n">1</td>
+											<td class="sales-list-item-title"><a href="#">나이키</a></td>
+											<td class="sales-list-item-size">230</td>
+											<td class="sales-list-item-price">12,000,000</td>
+											<td class="sales-list-item-seller">홍길동</td>
+											<td class="sales-list-item-buydate">2022-01-04</td>
+										</tr>
+										
+										<tr>			
+											<td class="sales-list-item-n">1</td>
+											<td class="sales-list-item-title"><a href="#">나이키</a></td>
+											<td class="sales-list-item-size">230</td>
+											<td class="sales-list-item-price">12,000,000</td>
+											<td class="sales-list-item-seller">홍길동</td>
+											<td class="sales-list-item-buydate">2022-01-04</td>
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						</div>	
+                    </div>         
+                </div>
+	
 				<!-- Footer -->
 				<jsp:include page="./footer.jsp"/>
 			</div>

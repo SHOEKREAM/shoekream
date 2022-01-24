@@ -26,10 +26,10 @@
 	<a href="./login">로그인</a>
 	<a href="./signup">회원가입</a>
 	
-    <a href="./help">고객센터</a>
+    
 	<%}%>
       
-        
+    <a href="./support">고객센터</a>
         
         
     </div>

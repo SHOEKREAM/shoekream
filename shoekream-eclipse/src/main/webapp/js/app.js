@@ -140,10 +140,6 @@ function removeChatItem(position)
 	
 }
 
-function removeWishlistItem(position) {
-	let item = $('#wishlist-table tbody tr').length;
-    $('#wishlist-item-'+ position).remove();
-}
 
 function showFindAccountId(){
 	$('#find-wrap-id').show();
@@ -160,11 +156,13 @@ function openPolicy() {
 }
  
 
-function callDibs() {
-	
-}
-
 function buyItem()
 {
 	
 }
+
+function convertToMonetaryUnit(money)
+{
+	return money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +'원';
+}
+
